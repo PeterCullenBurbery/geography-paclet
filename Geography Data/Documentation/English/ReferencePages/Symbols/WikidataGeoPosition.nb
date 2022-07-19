@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     15553,        433]
-NotebookOptionsPosition[      9871,        310]
-NotebookOutlinePosition[     10659,        335]
-CellTagsIndexPosition[     10580,        330]
+NotebookDataLength[     26072,        709]
+NotebookOptionsPosition[     19532,        565]
+NotebookOutlinePosition[     20339,        591]
+CellTagsIndexPosition[     20260,        586]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -128,9 +128,14 @@ Needs[\[Ellipsis]].", "MoreInfoText"], BaseStyle -> "IFrameBox"]],
 }], "ExamplesInitializationSection",
  CellID->176278633,ExpressionUUID->"60cd9920-5429-4c6f-95ab-dd1543eccdfc"],
 
-Cell[BoxData["XXXX"], "ExampleInitialization",
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`GeographyData`\>\"", 
+  "]"}]], "ExampleInitialization",
+ CellChangeTimes->{{3.8672593261586943`*^9, 3.8672593336526957`*^9}},
  CellID->242281475,ExpressionUUID->"4555a1fa-3a14-4fa8-ab3b-13c364189133"]
 }, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  InterpretationBox[GridBox[{
@@ -145,6 +150,256 @@ Cell[BoxData[
    }],
   $Line = 0; Null]], "PrimaryExamplesSection",
  CellID->145917668,ExpressionUUID->"44df7ec6-78e2-408b-bd62-4f32a756e05d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WikidataGeoPosition", "[", "\"\<Huntington\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.8672595091178327`*^9, 3.8672595162878733`*^9}},
+ CellLabel->"In[1]:=",
+ CellID->978398900,ExpressionUUID->"4e09741e-7979-43aa-b012-88a23719744e"],
+
+Cell[BoxData[
+ RowBox[{"WikidataGeoPosition", "[", "\<\"Huntington\"\>", "]"}]], "Output",
+ CellChangeTimes->{3.8672595169108715`*^9},
+ CellLabel->"Out[1]=",
+ CellID->283407963,ExpressionUUID->"9c9a126a-534f-4897-a010-ebeecbdf7cbe"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WikidataGeoPosition", "[", "\"\<Huntington\>\"", "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->21649760,ExpressionUUID->"8e085c76-1000-4c2d-a014-51275a664d63"],
+
+Cell[BoxData[
+ RowBox[{"WikidataGeoPosition", "[", "\<\"Huntington\"\>", "]"}]], "Output",
+ CellChangeTimes->{3.8672595286144934`*^9},
+ CellLabel->"Out[2]=",
+ CellID->561848977,ExpressionUUID->"05ccef0b-70ff-4edd-8e81-78a778b31caf"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "WikidataGeoPosition"}]], "Input",
+ CellChangeTimes->{{3.8672595318445024`*^9, 3.86725953679751*^9}},
+ CellLabel->"In[3]:=",
+ CellID->82764599,ExpressionUUID->"c2e3bfad-1694-489a-97e9-505df2756530"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = True, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"Cell$$17205`WikidataGeoPosition\"\>", 
+             "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"Cell$$17205`WikidataGeoPosition\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->{{6, 6}, {6, 3}}], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"],
+               ImageSizeCache->{12.5, {4., 8.5}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"],
+               ImageSizeCache->{12.5, {4., 8.5}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"Cell$$17205`WikidataGeoPosition\"\>", 
+             "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[<|
+   "ObjectType" -> "Symbol", "Usage" -> "Cell$$17205`WikidataGeoPosition", 
+    "Documentation" -> None, "OwnValues" -> None, "UpValues" -> None, 
+    "DownValues" -> None, "SubValues" -> None, "DefaultValues" -> None, 
+    "NValues" -> None, "FormatValues" -> None, "Options" -> None, 
+    "Attributes" -> {}, "FullName" -> "Cell$$17205`WikidataGeoPosition"|>, 
+   False]]], "Output",
+ CellChangeTimes->{3.867259538102495*^9},
+ CellLabel->"Out[3]=",
+ CellID->265842203,ExpressionUUID->"23ed74e9-d3bb-48f3-aed1-b6166aa43c82"]
+}, Open  ]]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -308,8 +563,9 @@ Cell[BoxData[""], "Template",
 }, Closed]]
 }, Open  ]]
 },
-WindowSize->{700.1999999999999, 604.8},
-WindowMargins->{{162.6, Automatic}, {Automatic, 39.6}},
+WindowSize->{1152., 585.6},
+WindowMargins->{{
+  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
 TaggingRules-><|"Paclet" -> "PeterBurbery/GeographyData"|>,
 FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStylesExt.nb", 
@@ -322,14 +578,14 @@ ExpressionUUID->"3a050a6a-056a-463d-a69c-d54eda54cb04"
 (*CellTagsOutline
 CellTagsIndex->{
  "ExtendedExamples"->{
-  Cell[4545, 150, 487, 13, 70, "ExtendedExamplesSection",ExpressionUUID->"2c7872c3-b231-44d4-ab1a-4eec13b8302c",
+  Cell[14206, 405, 487, 13, 71, "ExtendedExamplesSection",ExpressionUUID->"2c7872c3-b231-44d4-ab1a-4eec13b8302c",
    CellTags->"ExtendedExamples",
    CellID->191774876]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"ExtendedExamples", 10387, 323}
+ {"ExtendedExamples", 20066, 579}
  }
 *)
 (*NotebookFileOutline
@@ -369,75 +625,93 @@ Cell[3272, 108, 100, 1, 23, "MoreAbout",ExpressionUUID->"20ae9a15-fb28-4d03-b638
 Cell[CellGroupData[{
 Cell[3409, 114, 530, 14, 86, "ExamplesInitializationSection",ExpressionUUID->"60cd9920-5429-4c6f-95ab-dd1543eccdfc",
  CellID->176278633],
-Cell[3942, 130, 121, 1, 56, "ExampleInitialization",ExpressionUUID->"4555a1fa-3a14-4fa8-ab3b-13c364189133",
+Cell[3942, 130, 256, 4, 56, "ExampleInitialization",ExpressionUUID->"4555a1fa-3a14-4fa8-ab3b-13c364189133",
  CellID->242281475]
 }, Open  ]],
-Cell[4078, 134, 442, 12, 88, "PrimaryExamplesSection",ExpressionUUID->"44df7ec6-78e2-408b-bd62-4f32a756e05d",
+Cell[CellGroupData[{
+Cell[4235, 139, 442, 12, 88, "PrimaryExamplesSection",ExpressionUUID->"44df7ec6-78e2-408b-bd62-4f32a756e05d",
  CellID->145917668],
 Cell[CellGroupData[{
-Cell[4545, 150, 487, 13, 70, "ExtendedExamplesSection",ExpressionUUID->"2c7872c3-b231-44d4-ab1a-4eec13b8302c",
+Cell[4702, 155, 257, 4, 31, "Input",ExpressionUUID->"4e09741e-7979-43aa-b012-88a23719744e",
+ CellID->978398900],
+Cell[4962, 161, 232, 4, 30, "Output",ExpressionUUID->"9c9a126a-534f-4897-a010-ebeecbdf7cbe",
+ CellID->283407963]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5231, 170, 186, 3, 31, "Input",ExpressionUUID->"8e085c76-1000-4c2d-a014-51275a664d63",
+ CellID->21649760],
+Cell[5420, 175, 232, 4, 30, "Output",ExpressionUUID->"05ccef0b-70ff-4edd-8e81-78a778b31caf",
+ CellID->561848977]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5689, 184, 226, 4, 31, "Input",ExpressionUUID->"c2e3bfad-1694-489a-97e9-505df2756530",
+ CellID->82764599],
+Cell[5918, 190, 8239, 209, 140, "Output",ExpressionUUID->"23ed74e9-d3bb-48f3-aed1-b6166aa43c82",
+ CellID->265842203]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14206, 405, 487, 13, 71, "ExtendedExamplesSection",ExpressionUUID->"2c7872c3-b231-44d4-ab1a-4eec13b8302c",
  CellTags->"ExtendedExamples",
  CellID->191774876],
-Cell[5035, 165, 241, 5, 70, "ExampleSection",ExpressionUUID->"0bb7cd8d-248b-491d-b3e0-1c88b5e60539",
+Cell[14696, 420, 241, 5, 43, "ExampleSection",ExpressionUUID->"0bb7cd8d-248b-491d-b3e0-1c88b5e60539",
  CellID->526228786],
-Cell[5279, 172, 264, 5, 70, "ExampleSection",ExpressionUUID->"1b4161be-3cb7-4f6f-b195-3cb00ec086ca",
+Cell[14940, 427, 264, 5, 27, "ExampleSection",ExpressionUUID->"1b4161be-3cb7-4f6f-b195-3cb00ec086ca",
  CellID->113128776],
 Cell[CellGroupData[{
-Cell[5568, 181, 243, 5, 70, "ExampleSection",ExpressionUUID->"1340c306-85a8-4809-a6f4-bf2d83bb21fa",
+Cell[15229, 436, 243, 5, 27, "ExampleSection",ExpressionUUID->"1340c306-85a8-4809-a6f4-bf2d83bb21fa",
  CellID->112948110],
-Cell[5814, 188, 246, 5, 70, "ExampleSubsection",ExpressionUUID->"8274136f-fffc-4974-bff9-469e52ade5c7",
+Cell[15475, 443, 246, 5, 32, "ExampleSubsection",ExpressionUUID->"8274136f-fffc-4974-bff9-469e52ade5c7",
  CellID->871289855],
-Cell[6063, 195, 246, 5, 70, "ExampleSubsection",ExpressionUUID->"54725510-0281-438b-b26c-6aa0509a6c73",
+Cell[15724, 450, 246, 5, 26, "ExampleSubsection",ExpressionUUID->"54725510-0281-438b-b26c-6aa0509a6c73",
  CellID->152775175]
 }, Open  ]],
-Cell[6324, 203, 248, 5, 70, "ExampleSection",ExpressionUUID->"b1ad3bfd-07f8-4b8c-8250-553c0c595089",
+Cell[15985, 458, 248, 5, 43, "ExampleSection",ExpressionUUID->"b1ad3bfd-07f8-4b8c-8250-553c0c595089",
  CellID->345661740],
-Cell[6575, 210, 258, 5, 70, "ExampleSection",ExpressionUUID->"f4345e68-5855-490b-8674-c64158ac479c",
+Cell[16236, 465, 258, 5, 27, "ExampleSection",ExpressionUUID->"f4345e68-5855-490b-8674-c64158ac479c",
  CellID->504883923],
-Cell[6836, 217, 250, 5, 70, "ExampleSection",ExpressionUUID->"d3edcefd-0bdf-4b61-8b5c-b64565d78808",
+Cell[16497, 472, 250, 5, 27, "ExampleSection",ExpressionUUID->"d3edcefd-0bdf-4b61-8b5c-b64565d78808",
  CellID->91231038],
-Cell[7089, 224, 256, 5, 70, "ExampleSection",ExpressionUUID->"539b6d94-0115-4462-bd11-7c2285bcd6bb",
+Cell[16750, 479, 256, 5, 27, "ExampleSection",ExpressionUUID->"539b6d94-0115-4462-bd11-7c2285bcd6bb",
  CellID->171679017],
-Cell[7348, 231, 249, 5, 70, "ExampleSection",ExpressionUUID->"5dd940b6-5c09-4e83-bae1-4824ec682b8d",
+Cell[17009, 486, 249, 5, 27, "ExampleSection",ExpressionUUID->"5dd940b6-5c09-4e83-bae1-4824ec682b8d",
  CellID->765404807]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7634, 241, 110, 1, 70, "MetadataSection",ExpressionUUID->"504d3e96-1db5-41af-93c2-217480f02d5a",
+Cell[17295, 496, 110, 1, 77, "MetadataSection",ExpressionUUID->"504d3e96-1db5-41af-93c2-217480f02d5a",
  CellID->645048710],
 Cell[CellGroupData[{
-Cell[7769, 246, 482, 13, 70, "CategorizationSection",ExpressionUUID->"6930fc09-ab7e-4863-a065-50492ad65555",
+Cell[17430, 501, 482, 13, 38, "CategorizationSection",ExpressionUUID->"6930fc09-ab7e-4863-a065-50492ad65555",
  CellID->8052388],
-Cell[8254, 261, 134, 2, 70, "Categorization",ExpressionUUID->"d95dcf98-a47e-4959-b435-988b966bbe73",
+Cell[17915, 516, 134, 2, 70, "Categorization",ExpressionUUID->"d95dcf98-a47e-4959-b435-988b966bbe73",
  CellID->142218895],
-Cell[8391, 265, 153, 2, 70, "Categorization",ExpressionUUID->"c617d481-6a26-4326-a115-8439107d55c9",
+Cell[18052, 520, 153, 2, 70, "Categorization",ExpressionUUID->"c617d481-6a26-4326-a115-8439107d55c9",
  CellID->50518303],
-Cell[8547, 269, 151, 2, 70, "Categorization",ExpressionUUID->"b3c871ba-05f6-4859-9316-a89fc5d27be0",
+Cell[18208, 524, 151, 2, 70, "Categorization",ExpressionUUID->"b3c871ba-05f6-4859-9316-a89fc5d27be0",
  CellID->621960731],
-Cell[8701, 273, 170, 2, 70, "Categorization",ExpressionUUID->"3bc9d824-3d19-4bfe-8a90-27f92980155a",
+Cell[18362, 528, 170, 2, 70, "Categorization",ExpressionUUID->"3bc9d824-3d19-4bfe-8a90-27f92980155a",
  CellID->214363883]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[8908, 280, 110, 1, 70, "KeywordsSection",ExpressionUUID->"b077561b-0d10-4fff-8bf3-5590f532881e",
+Cell[18569, 535, 110, 1, 25, "KeywordsSection",ExpressionUUID->"b077561b-0d10-4fff-8bf3-5590f532881e",
  CellID->242803670],
-Cell[9021, 283, 99, 1, 70, "Keywords",ExpressionUUID->"9175fc1d-4d8c-40e9-ab00-9c9c15f49777",
+Cell[18682, 538, 99, 1, 70, "Keywords",ExpressionUUID->"9175fc1d-4d8c-40e9-ab00-9c9c15f49777",
  CellID->206105073]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[9157, 289, 119, 1, 70, "TemplatesSection",ExpressionUUID->"a2035ef7-b293-4a1f-840c-c7f94795f9c0",
+Cell[18818, 544, 119, 1, 25, "TemplatesSection",ExpressionUUID->"a2035ef7-b293-4a1f-840c-c7f94795f9c0",
  CellID->428383791],
-Cell[9279, 292, 148, 2, 70, "Template",ExpressionUUID->"98fe70c9-73fc-4abd-b7cd-d128bf304665",
+Cell[18940, 547, 148, 2, 70, "Template",ExpressionUUID->"98fe70c9-73fc-4abd-b7cd-d128bf304665",
  CellID->832163287],
-Cell[9430, 296, 137, 2, 70, "Template",ExpressionUUID->"93797972-9bb6-406c-b75a-6a703d15e863",
+Cell[19091, 551, 137, 2, 70, "Template",ExpressionUUID->"93797972-9bb6-406c-b75a-6a703d15e863",
  CellID->109767032],
-Cell[9570, 300, 134, 2, 70, "Template",ExpressionUUID->"eef1e65e-ab56-4c95-9ff5-41c032622d70",
+Cell[19231, 555, 134, 2, 70, "Template",ExpressionUUID->"eef1e65e-ab56-4c95-9ff5-41c032622d70",
  CellID->15718409],
-Cell[9707, 304, 136, 2, 70, "Template",ExpressionUUID->"b9b31cb8-86c7-4eeb-9971-ea50994f360d",
+Cell[19368, 559, 136, 2, 70, "Template",ExpressionUUID->"b9b31cb8-86c7-4eeb-9971-ea50994f360d",
  CellID->89334962]
 }, Closed]]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
