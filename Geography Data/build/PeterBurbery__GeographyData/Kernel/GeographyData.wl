@@ -5,7 +5,7 @@ BeginPackage["PeterBurbery`GeographyData`"];
 (* Declare your packages public symbols here. *)
 
 SayHello;
-
+WikidataGeoPosition;
 Begin["`Private`"];
 
 (* Define your public and private symbols here. *)

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     19725,        541]
-NotebookOptionsPosition[     16102,        462]
-NotebookOutlinePosition[     17861,        506]
-CellTagsIndexPosition[     17776,        501]
+NotebookDataLength[     10901,        305]
+NotebookOptionsPosition[      7635,        235]
+NotebookOutlinePosition[      9443,        280]
+CellTagsIndexPosition[      9359,        275]
 WindowTitle->WikidataGeoPosition
 WindowFrame->Normal*)
 
@@ -78,7 +78,7 @@ GeographyData/ref/WikidataGeoPosition.html"], StandardForm]], "Input",
         Null], "\<\"Go to web URL\"\>":>FrontEndExecute[{
          NotebookLocate[{
            URL[(If[
-               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$265701], 
+               TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$293672], 
                "http://reference.wolfram.com/system-modeler/", 
                "http://reference.wolfram.com/language/"] <> 
              "PeterBurbery/GeographyData/ref/WikidataGeoPosition") <> 
@@ -113,9 +113,10 @@ Cell[BoxData[GridBox[{
 Cell[BoxData[GridBox[{
    {"", Cell[TextData[{
      Cell[BoxData[
-      RowBox[{"WikidataGeoPosition", "[", "]"}]], "InlineFormula",
+      RowBox[{"WikidataGeoPosition", "[", 
+       StyleBox["place", "TI"], "]"}]], "InlineFormula",
       FontFamily->"Source Sans Pro"],
-     " \[LineSeparator]XXXX"
+     " \[LineSeparator]find the coordinates for a place using Wikidata"
     }]]}
   }]], "Usage",
  CellID->98749720]
@@ -158,7 +159,7 @@ Cell[TextData[{
  WholeCellGroupOpener->True,
  CacheGraphics->False,
  CellTags->"PrimaryExamplesSection",
- CellID->635973766],
+ CellID->169918627],
 
 Cell[BoxData[
  RowBox[{"Needs", "[", "\"\<PeterBurbery`GeographyData`\>\"", "]"}]], "Input",\
@@ -202,7 +203,10 @@ Cell[TextData[{
 }], "ExampleSection", "ExampleSection",
  WholeCellGroupOpener->True,
  CacheGraphics->False,
- CellID->583513999],
+ CellID->30160555],
+
+Cell["Find the coordinates of a place from Wikidata:", "ExampleText",
+ CellID->376158824],
 
 Cell[CellGroupData[{
 
@@ -210,246 +214,15 @@ Cell[BoxData[
  RowBox[{"WikidataGeoPosition", "[", "\"\<Huntington\>\"", "]"}]], "Input",
  CellProlog:>Needs["PeterBurbery`GeographyData`"],
  CellLabel->"In[1]:=",
- CellID->978398900],
+ CellID->22090278],
 
 Cell[BoxData[
- RowBox[{"WikidataGeoPosition", "[", "\<\"Huntington\"\>", "]"}]], "Output",
+ RowBox[{"GeoPosition", "[", 
+  RowBox[{"{", 
+   RowBox[{"38.420833333333`", ",", 
+    RowBox[{"-", "82.423611111111`"}]}], "}"}], "]"}]], "Output",
  CellLabel->"Out[1]=",
- CellID->283407963]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"WikidataGeoPosition", "[", "\"\<Huntington\>\"", "]"}]], "Input",
- CellProlog:>Needs["PeterBurbery`GeographyData`"],
- CellLabel->"In[2]:=",
- CellID->21649760],
-
-Cell[BoxData[
- RowBox[{"WikidataGeoPosition", "[", "\<\"Huntington\"\>", "]"}]], "Output",
- CellLabel->"Out[2]=",
- CellID->561848977]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"?", "WikidataGeoPosition"}]], "Input",
- CellProlog:>Needs["PeterBurbery`GeographyData`"],
- CellLabel->"In[3]:=",
- CellID->82764599],
-
-Cell[BoxData[
- InterpretationBox[
-  StyleBox[
-   FrameBox[
-    DynamicModuleBox[{System`InformationDump`open$$ = True, 
-     System`InformationDump`mouseOver$$ = False}, 
-     PaneSelectorBox[{True->
-      TagBox[GridBox[{
-         {
-          ItemBox[
-           PaneBox[
-            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
-             StripOnInput->False,
-             BaseStyle -> None],
-            FrameMargins->{{4, 0}, {-1, 1}}],
-           BaseStyle->"InformationTitleBackground",
-           StripOnInput->False], 
-          ItemBox["\<\"\"\>",
-           BaseStyle->"InformationTitleBackground",
-           StripOnInput->False]},
-         {
-          ItemBox[
-           PaneBox[
-            
-            StyleBox["\<\"Cell$$17205`WikidataGeoPosition\"\>", 
-             "InformationUsageText",
-             StripOnInput->False,
-             LineSpacing->{1.5, 1.5, 3.}],
-            FrameMargins->{{10, 10}, {8, 10}}],
-           BaseStyle->"InformationUsageSubtitleBackground",
-           StripOnInput->False], 
-          ItemBox["\<\"\"\>",
-           BaseStyle->"InformationUsageSubtitleBackground",
-           StripOnInput->False]},
-         {
-          PaneBox[GridBox[{
-             {
-              
-              DynamicModuleBox[{System`InformationDump`open$$ = {
-               False, False, False, False, False, False}}, 
-               StyleBox[GridBox[{
-                  {
-                   TagBox[
-                    TooltipBox[
-                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
-                    StripOnInput->False],
-                    "\"FullName\"",
-                    TooltipStyle->"TextStyling"],
-                    
-                    Annotation[#, "FullName", 
-                    "Tooltip"]& ], "\<\"Cell$$17205`WikidataGeoPosition\"\>"}
-                 },
-                 AutoDelete->False,
-                 GridBoxAlignment->{"Columns" -> {Right, Left}},
-                 GridBoxDividers->None,
-                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
-                 GridBoxSpacings->{"Columns" -> {
-                    Offset[0.27999999999999997`], {
-                    Offset[0.5599999999999999]}, 
-                    Offset[0.27999999999999997`]}, "Rows" -> {
-                    Offset[0.2], {
-                    Offset[0.8]}, 
-                    Offset[0.2]}}], "DialogStyle",
-                StripOnInput->False],
-               DynamicModuleValues:>{}]}
-            },
-            DefaultBaseStyle->"Column",
-            GridBoxAlignment->{"Columns" -> {{Left}}},
-            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
-            
-            GridBoxItemSize->{
-             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
-            GridBoxSpacings->{"Columns" -> {
-                Offset[0.27999999999999997`], {
-                 Offset[0.5599999999999999]}, 
-                Offset[0.27999999999999997`]}, "Rows" -> {
-                Offset[0.2], {
-                 Offset[3.6]}, 
-                Offset[0.2]}}],
-           FrameMargins->{{6, 6}, {6, 3}}], ""},
-         {
-          ItemBox[
-           TagBox[
-            ButtonBox[
-             PaneSelectorBox[{False->
-              
-              DynamicBox[FEPrivate`FrontEndResource[
-               "FEBitmaps", "UpPointerOpener"],
-               ImageSizeCache->{12.5, {4., 8.5}}], True->
-              
-              DynamicBox[FEPrivate`FrontEndResource[
-               "FEBitmaps", "UpPointerOpenerHot"],
-               ImageSizeCache->{12.5, {4., 8.5}}]}, Dynamic[
-              System`InformationDump`mouseOver$$]],
-             Alignment->Left,
-             Appearance->{"Default" -> None},
-             
-             ButtonFunction:>FEPrivate`Set[
-              System`InformationDump`open$$, False],
-             Evaluator->Automatic,
-             FrameMargins->{{9, 0}, {0, 0}},
-             ImageMargins->0,
-             ImageSize->Full,
-             Method->"Preemptive"],
-            
-            EventHandlerTag[{
-             "MouseEntered" :> 
-              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
-              "MouseExited" :> 
-              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
-              Method -> "Preemptive", PassEventsDown -> Automatic, 
-              PassEventsUp -> True}]],
-           BaseStyle->"InformationTitleBackground",
-           StripOnInput->False], "\[SpanFromLeft]"}
-        },
-        AutoDelete->False,
-        FrameStyle->Directive[
-          GrayLevel[0.8], 
-          Thickness[Tiny]],
-        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
-        GridBoxDividers->{
-         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
-        GridBoxItemSize->{
-         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-       "Grid"], False->
-      TagBox[GridBox[{
-         {
-          ItemBox[
-           PaneBox[
-            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
-             StripOnInput->False],
-            FrameMargins->{{4, 0}, {-1, 1}}],
-           BaseStyle->"InformationTitleBackground",
-           StripOnInput->False], 
-          ItemBox["\<\"\"\>",
-           BaseStyle->"InformationTitleBackground",
-           StripOnInput->False]},
-         {
-          ItemBox[
-           PaneBox[
-            
-            StyleBox["\<\"Cell$$17205`WikidataGeoPosition\"\>", 
-             "InformationUsageText",
-             StripOnInput->False,
-             LineSpacing->{1.5, 1.5, 3.}],
-            FrameMargins->{{10, 10}, {8, 10}}],
-           BaseStyle->"InformationUsageSubtitleBackground",
-           StripOnInput->False], 
-          ItemBox["\<\"\"\>",
-           BaseStyle->"InformationUsageSubtitleBackground",
-           StripOnInput->False]},
-         {
-          ItemBox[
-           TagBox[
-            ButtonBox[
-             PaneSelectorBox[{False->
-              
-              DynamicBox[FEPrivate`FrontEndResource[
-               "FEBitmaps", "DownPointerOpener"]], True->
-              
-              DynamicBox[FEPrivate`FrontEndResource[
-               "FEBitmaps", "DownPointerOpenerHot"]]}, Dynamic[
-              System`InformationDump`mouseOver$$]],
-             Alignment->Left,
-             Appearance->{"Default" -> None},
-             
-             ButtonFunction:>FEPrivate`Set[
-              System`InformationDump`open$$, True],
-             Evaluator->Automatic,
-             FrameMargins->{{9, 0}, {0, 0}},
-             ImageMargins->0,
-             ImageSize->Full,
-             Method->"Preemptive"],
-            
-            EventHandlerTag[{
-             "MouseEntered" :> 
-              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
-              "MouseExited" :> 
-              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
-              Method -> "Preemptive", PassEventsDown -> Automatic, 
-              PassEventsUp -> True}]],
-           BaseStyle->"InformationTitleBackground",
-           StripOnInput->False], "\[SpanFromLeft]"}
-        },
-        AutoDelete->False,
-        FrameStyle->Directive[
-          GrayLevel[0.8], 
-          Thickness[Tiny]],
-        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
-        GridBoxDividers->{
-         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
-        GridBoxItemSize->{
-         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-       "Grid"]}, Dynamic[System`InformationDump`open$$],
-      BaselinePosition->Baseline,
-      FrameMargins->0,
-      ImageSize->Automatic],
-     DynamicModuleValues:>{}],
-    BaseStyle->"InformationGridFrame",
-    StripOnInput->False], "InformationGridPlain",
-   StripOnInput->False],
-  InformationData[<|
-   "ObjectType" -> "Symbol", "Usage" -> "Cell$$17205`WikidataGeoPosition", 
-    "Documentation" -> None, "OwnValues" -> None, "UpValues" -> None, 
-    "DownValues" -> None, "SubValues" -> None, "DefaultValues" -> None, 
-    "NValues" -> None, "FormatValues" -> None, "Options" -> None, 
-    "Attributes" -> {}, "FullName" -> "Cell$$17205`WikidataGeoPosition"|>, 
-   False]]], "Output",
- CellLabel->"Out[3]=",
- CellID->265842203]
+ CellID->732972450]
 }, Open  ]]
 }, Dynamic[CurrentValue[
  EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, 
@@ -473,14 +246,15 @@ TaggingRules->{
   "NewStyles" -> True, "CitationPopupData" -> $Failed, "ShowCitation" -> 
   False, "RootCaptions" -> "", 
   "Metadata" -> {
-   "built" -> "{2022, 7, 19, 18, 45, 56.6505043}", 
+   "built" -> "{2022, 7, 19, 18, 50, 11.0330133}", 
     "history" -> {"", "", "", ""}, "context" -> "PeterBurbery`GeographyData`",
      "keywords" -> {}, "specialkeywords" -> {}, 
     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
     "Peter Burbery/ Geography Data Symbol", "language" -> "en", "paclet" -> 
     "PeterBurbery/GeographyData", "status" -> "None", "summary" -> 
-    "WikidataGeoPosition[] XXXX", "synonyms" -> {}, "tabletags" -> {}, 
-    "title" -> "WikidataGeoPosition", "titlemodifier" -> "", "windowtitle" -> 
+    "WikidataGeoPosition[place] find the coordinates for a place using \
+Wikidata", "synonyms" -> {}, "tabletags" -> {}, "title" -> 
+    "WikidataGeoPosition", "titlemodifier" -> "", "windowtitle" -> 
     "WikidataGeoPosition", "type" -> "Symbol", "uri" -> 
     "PeterBurbery/GeographyData/ref/WikidataGeoPosition"}},
 FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
@@ -493,56 +267,46 @@ StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb",
 (*CellTagsOutline
 CellTagsIndex->{
  "PrimaryExamplesSection"->{
-  Cell[4255, 125, 1164, 35, 70, "PrimaryExamplesSection",ExpressionUUID->"228c4461-6bb2-4542-be62-b7c25fbb8016",
+  Cell[4331, 126, 1164, 35, 70, "PrimaryExamplesSection",ExpressionUUID->"6c2e7eca-10e0-4261-9f34-1faddca2f840",
    CellTags->"PrimaryExamplesSection",
-   CellID->635973766]}
+   CellID->169918627]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"PrimaryExamplesSection", 17577, 494}
+ {"PrimaryExamplesSection", 9160, 268}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[591, 21, 3045, 75, 70, "AnchorBarGrid",ExpressionUUID->"39abdcc5-eaeb-4f86-9d2b-dddeb075a3e0",
+Cell[591, 21, 3045, 75, 70, "AnchorBarGrid",ExpressionUUID->"d18bc540-c444-4aa9-aad9-94a6c3e0c48f",
  CellID->1],
-Cell[3639, 98, 54, 0, 70, "ContextNameCell",ExpressionUUID->"63bf06f3-c773-4a1f-a021-52dc46583213"],
+Cell[3639, 98, 54, 0, 70, "ContextNameCell",ExpressionUUID->"0c828b20-f0a3-4ee0-bd87-93d18f983477"],
 Cell[CellGroupData[{
-Cell[3718, 102, 254, 8, 70, "ObjectNameGrid",ExpressionUUID->"002c4e0b-7b78-4de3-9594-4421cb3c9bf4"],
-Cell[3975, 112, 243, 8, 70, "Usage",ExpressionUUID->"943acc6a-9f82-4714-9eaf-7e8c6d6970de",
+Cell[3718, 102, 254, 8, 70, "ObjectNameGrid",ExpressionUUID->"0d9a77a8-6a30-4f59-bf1e-19a52d431e5f"],
+Cell[3975, 112, 319, 9, 70, "Usage",ExpressionUUID->"db10bba9-54f5-4a34-8ed4-ffd4f9531772",
  CellID->98749720]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4255, 125, 1164, 35, 70, "PrimaryExamplesSection",ExpressionUUID->"228c4461-6bb2-4542-be62-b7c25fbb8016",
+Cell[4331, 126, 1164, 35, 70, "PrimaryExamplesSection",ExpressionUUID->"6c2e7eca-10e0-4261-9f34-1faddca2f840",
  CellTags->"PrimaryExamplesSection",
- CellID->635973766],
-Cell[5422, 162, 162, 4, 70, "Input",ExpressionUUID->"146b6b8d-93c2-4b21-9e8a-5e7bb784b21f",
+ CellID->169918627],
+Cell[5498, 163, 162, 4, 70, "Input",ExpressionUUID->"0542fac6-de92-4f8c-8b52-36d58d8fc9f1",
  CellID->242281475],
 Cell[CellGroupData[{
-Cell[5609, 170, 1175, 34, 70, "ExampleSection",ExpressionUUID->"063505ed-eb8f-4cb3-8cef-ed95f578f92f",
- CellID->583513999],
+Cell[5685, 171, 1174, 34, 70, "ExampleSection",ExpressionUUID->"99f9d826-c5c2-4d7d-962e-51fb953d2d7a",
+ CellID->30160555],
+Cell[6862, 207, 89, 1, 70, "ExampleText",ExpressionUUID->"e563d909-564a-43df-857c-0f883f815987",
+ CellID->376158824],
 Cell[CellGroupData[{
-Cell[6809, 208, 183, 4, 70, "Input",ExpressionUUID->"0c146d53-b616-4703-b985-04868c492be1",
- CellID->978398900],
-Cell[6995, 214, 133, 3, 70, "Output",ExpressionUUID->"b5107f70-6a08-4db6-a114-b10f4d5de816",
- CellID->283407963]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[7165, 222, 182, 4, 70, "Input",ExpressionUUID->"f3658382-57db-4b07-aca5-792854907bef",
- CellID->21649760],
-Cell[7350, 228, 133, 3, 70, "Output",ExpressionUUID->"ecfb47c1-54ad-4d09-a381-e89283cbb941",
- CellID->561848977]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[7520, 236, 155, 4, 70, "Input",ExpressionUUID->"878fa47e-8a52-433d-9dcc-6314869b610e",
- CellID->82764599],
-Cell[7678, 242, 8155, 209, 70, "Output",ExpressionUUID->"b7edcc63-fbfb-4955-aff7-457eb38ebdff",
- CellID->265842203]
+Cell[6976, 212, 182, 4, 70, "Input",ExpressionUUID->"351f525b-3db7-4bf5-961a-159dbd928471",
+ CellID->22090278],
+Cell[7161, 218, 205, 6, 70, "Output",ExpressionUUID->"0ced8ac6-e203-4c62-8d51-a815168cd858",
+ CellID->732972450]
 }, Open  ]]
 }, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "ExampleSection", "0"}, Closed]]]]
 }, Dynamic[CurrentValue[EvaluationNotebook[], {TaggingRules, "Openers", "PrimaryExamplesSection"}, Closed]]]],
-Cell[16075, 460, 23, 0, 70, "FooterCell",ExpressionUUID->"cdfbbc63-fb6f-47f6-9fb5-c4d2662f88d3"]
+Cell[7608, 233, 23, 0, 70, "FooterCell",ExpressionUUID->"ece1f609-e40a-46ba-8c7e-6fb839b25a91"]
 }
 ]
 *)
