@@ -1,0 +1,1628 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     67181,       1620]
+NotebookOptionsPosition[     61014,       1486]
+NotebookOutlinePosition[     61823,       1512]
+CellTagsIndexPosition[     61743,       1507]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["FlightsOverhead", "ObjectName",
+ CellID->789340954,ExpressionUUID->"d6d5f791-866a-4303-bb52-4657259daa8b"],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo",ExpressionUUID->"26ea22a7-cc63-4f88-bb92-ea6e801e0194"],
+ Cell[BoxData[
+  RowBox[{"FlightsOverhead", "[", 
+   StyleBox["position", "TI"], "]"}]], "InlineFormula",ExpressionUUID->
+  "28ee4185-c343-40d3-82af-305b559b05df"],
+ " \[LineSeparator]compute data on flights overhead at geographical position ",
+ Cell[BoxData[
+  StyleBox["position", "TI"]], "InlineFormula",ExpressionUUID->
+  "034aabe9-4f0e-402e-913d-929b94d68de6"]
+}], "Usage",
+ CellChangeTimes->{{3.867332284214741*^9, 3.867332323312682*^9}},
+ CellID->196456096,ExpressionUUID->"7c1c9da1-5537-4961-aa76-36db9d400044"],
+
+Cell["XXXX", "Notes",
+ CellID->126568499,ExpressionUUID->"2395094d-52db-4473-bb4d-77602fdfd6aa"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Tech Notes",
+ Cell[BoxData[
+  TemplateBox[{"TechNotes", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell["Insert links to related tech notes.", "MoreInfoText"], BaseStyle -> 
+       "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "0a93616d-3912-4382-a3b2-d5f0f467d326"]
+}], "TechNotesSection",
+ CellID->91358005,ExpressionUUID->"2317ec7c-fc91-4789-a4db-99f07eb4ef80"],
+
+Cell["XXXX", "Tutorials",
+ CellID->765189943,ExpressionUUID->"9d2c90fe-e050-4bb3-af2f-7161123bacec"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Related Links",
+ Cell[BoxData[
+  TemplateBox[{"RelatedLinks", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Insert links to any related page, including web pages.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "23a71092-0f45-471d-884b-90c225b2b9cf"]
+}], "RelatedLinksSection",
+ CellID->136603952,ExpressionUUID->"4cb6a116-008c-48ff-bab6-81a632057129"],
+
+Cell["XXXX", "RelatedLinks",
+ CellID->374743776,ExpressionUUID->"d0d7e052-18f0-44a4-815f-8339adc993ee"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "See Also",
+ Cell[BoxData[
+  TemplateBox[{"SeeAlso", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Insert links to any related reference (function) pages. Type a space, \
+a period and then another space between function names. Then click the \
+palette's Inline Listing Toggle button.", "MoreInfoText"], BaseStyle -> 
+       "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "db805164-159a-4030-b32a-62bbbec17e26"]
+}], "SeeAlsoSection",
+ CellID->194719968,ExpressionUUID->"2f15921d-5ddd-4ca2-8f1b-45a4a1d2cf04"],
+
+Cell["XXXX", "SeeAlso",
+ CellID->34014644,ExpressionUUID->"cfb64e39-fd20-40fc-b354-ae52db16330b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Guides", "MoreAboutSection",
+ CellChangeTimes->{{3.843042374232973*^9, 3.843042375545676*^9}},
+ CellID->35214943,ExpressionUUID->"dcce6579-09b8-4001-965b-5937867913e2"],
+
+Cell[TextData[ButtonBox["Geographical Data",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:PeterBurbery/GeographyData/guide/GeographicalData"]], "MoreAbout",
+ CellChangeTimes->{{3.867332382324279*^9, 3.8673323913232555`*^9}},
+ CellID->88153988,ExpressionUUID->"dc4662e2-b30b-4a03-8e76-a29bf6c9d0bf"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Examples Initialization",
+ Cell[BoxData[
+  TemplateBox[{"ExamplesInitialization", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Input that is to be evaluated before any examples are run, e.g. \
+Needs[\[Ellipsis]].", "MoreInfoText"], BaseStyle -> "IFrameBox"]], 
+     "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "5d88c5bd-a600-4f12-a166-63e77126161a"]
+}], "ExamplesInitializationSection",
+ CellID->22811984,ExpressionUUID->"ff031e52-9578-4646-aa63-50edfa8fd6fc"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PeterBurbery`GeographyData`\>\"", 
+  "]"}]], "ExampleInitialization",
+ CellChangeTimes->{{3.8673323276758785`*^9, 3.867332343986462*^9}},
+ CellID->771669,ExpressionUUID->"b719c4cc-b6bc-47c9-ab9b-46e30da80e9a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox[
+      RowBox[{"Basic", " ", "Examples"}], "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->3523319,ExpressionUUID->"fc194e6b-04db-4250-a1ef-6c39d21da767"],
+
+Cell["See flights overhead right now:", "ExampleText",
+ CellChangeTimes->{{3.8673323484272327`*^9, 3.867332355691704*^9}},
+ CellID->206791742,ExpressionUUID->"35704094-884c-461b-bda1-8baa31af79d1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FlightsOverhead", "[", "Here", "]"}]], "Input",
+ CellChangeTimes->{{3.867332356963709*^9, 3.867332359823823*^9}},
+ CellLabel->"In[1]:=",
+ CellID->59693539,ExpressionUUID->"826e805e-0c6a-4339-a67a-7d43b002617d"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"Flights\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      TemplateBox[{
+        TemplateBox[{"\"Delta Air Lines\"", "\" flight \"", "\"1071\"", 
+          StyleBox["\" (departing \"", 
+           GrayLevel[0.5], StripOnInput -> False], 
+          TemplateBox[{"\"20 Jul 2022\"", "\",\"", 
+            TemplateBox[{"\"10:10 am\"", "\" \"", 
+              StyleBox["\"MDT\"", 
+               GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"]}, 
+           "RowDefault"], 
+          StyleBox["\")\"", 
+           GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"], 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"Flight\"", ",", "\"202207200000244717\""}], "]"}], 
+        "\"Entity[\\\"Flight\\\", \\\"202207200000244717\\\"]\"", 
+        "\"Flight\""},
+       "Entity"], ",", 
+      TemplateBox[{
+        TemplateBox[{"\"NetJets\"", "\" flight \"", "\"637\"", 
+          StyleBox["\" (departing \"", 
+           GrayLevel[0.5], StripOnInput -> False], 
+          TemplateBox[{"\"20 Jul 2022\"", "\",\"", 
+            TemplateBox[{"\"2:36 pm\"", "\" \"", 
+              StyleBox["\"EDT\"", 
+               GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"]}, 
+           "RowDefault"], 
+          StyleBox["\")\"", 
+           GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"], 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"Flight\"", ",", "\"202207200000280113\""}], "]"}], 
+        "\"Entity[\\\"Flight\\\", \\\"202207200000280113\\\"]\"", 
+        "\"Flight\""},
+       "Entity"], ",", 
+      TemplateBox[{
+        TemplateBox[{"\"Republic Airlines\"", "\" flight \"", "\"4618\"", 
+          StyleBox["\" (departing \"", 
+           GrayLevel[0.5], StripOnInput -> False], 
+          TemplateBox[{"\"20 Jul 2022\"", "\",\"", 
+            TemplateBox[{"\"1:45 pm\"", "\" \"", 
+              StyleBox["\"EDT\"", 
+               GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"]}, 
+           "RowDefault"], 
+          StyleBox["\")\"", 
+           GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"], 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"Flight\"", ",", "\"202207200000271030\""}], "]"}], 
+        "\"Entity[\\\"Flight\\\", \\\"202207200000271030\\\"]\"", 
+        "\"Flight\""},
+       "Entity"], ",", 
+      TemplateBox[{
+        TemplateBox[{"\"Allegiant Air\"", "\" flight \"", "\"584\"", 
+          StyleBox["\" (departing \"", 
+           GrayLevel[0.5], StripOnInput -> False], 
+          TemplateBox[{"\"20 Jul 2022\"", "\",\"", 
+            TemplateBox[{"\"1:52 pm\"", "\" \"", 
+              StyleBox["\"EDT\"", 
+               GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"]}, 
+           "RowDefault"], 
+          StyleBox["\")\"", 
+           GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"], 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"Flight\"", ",", "\"202207200000294785\""}], "]"}], 
+        "\"Entity[\\\"Flight\\\", \\\"202207200000294785\\\"]\"", 
+        "\"Flight\""},
+       "Entity"], ",", 
+      TemplateBox[{
+        TemplateBox[{
+         "\"Air Transport International\"", "\" flight \"", "\"3485\"", 
+          StyleBox["\" (departing \"", 
+           GrayLevel[0.5], StripOnInput -> False], 
+          TemplateBox[{"\"20 Jul 2022\"", "\",\"", 
+            TemplateBox[{"\"2:01 pm\"", "\" \"", 
+              StyleBox["\"EDT\"", 
+               GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"]}, 
+           "RowDefault"], 
+          StyleBox["\")\"", 
+           GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"], 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"Flight\"", ",", "\"202207200000202201\""}], "]"}], 
+        "\"Entity[\\\"Flight\\\", \\\"202207200000202201\\\"]\"", 
+        "\"Flight\""},
+       "Entity"], ",", 
+      TemplateBox[{
+        TemplateBox[{"\"Delta Air Lines\"", "\" flight \"", "\"1066\"", 
+          StyleBox["\" (departing \"", 
+           GrayLevel[0.5], StripOnInput -> False], 
+          TemplateBox[{"\"20 Jul 2022\"", "\",\"", 
+            TemplateBox[{"\"1:54 pm\"", "\" \"", 
+              StyleBox["\"EDT\"", 
+               GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"]}, 
+           "RowDefault"], 
+          StyleBox["\")\"", 
+           GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"], 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"Flight\"", ",", "\"202207200000282406\""}], "]"}], 
+        "\"Entity[\\\"Flight\\\", \\\"202207200000282406\\\"]\"", 
+        "\"Flight\""},
+       "Entity"], ",", 
+      TemplateBox[{
+        TemplateBox[{"\"Bombardier Aerospace\"", "\" flight \"", "\"425\"", 
+          StyleBox["\" (departing \"", 
+           GrayLevel[0.5], StripOnInput -> False], 
+          TemplateBox[{"\"20 Jul 2022\"", "\",\"", 
+            TemplateBox[{"\"1:49 pm\"", "\" \"", 
+              StyleBox["\"EDT\"", 
+               GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"]}, 
+           "RowDefault"], 
+          StyleBox["\")\"", 
+           GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"], 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"Flight\"", ",", "\"202207200000196847\""}], "]"}], 
+        "\"Entity[\\\"Flight\\\", \\\"202207200000196847\\\"]\"", 
+        "\"Flight\""},
+       "Entity"], ",", 
+      TemplateBox[{
+        TemplateBox[{"\"American Airlines\"", "\" flight \"", "\"2667\"", 
+          StyleBox["\" (departing \"", 
+           GrayLevel[0.5], StripOnInput -> False], 
+          TemplateBox[{"\"20 Jul 2022\"", "\",\"", 
+            TemplateBox[{"\"2:31 pm\"", "\" \"", 
+              StyleBox["\"EDT\"", 
+               GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"]}, 
+           "RowDefault"], 
+          StyleBox["\")\"", 
+           GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"], 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"Flight\"", ",", "\"202207200000283221\""}], "]"}], 
+        "\"Entity[\\\"Flight\\\", \\\"202207200000283221\\\"]\"", 
+        "\"Flight\""},
+       "Entity"], ",", 
+      TemplateBox[{
+        TemplateBox[{"\"United Airlines\"", "\" flight \"", "\"2610\"", 
+          StyleBox["\" (departing \"", 
+           GrayLevel[0.5], StripOnInput -> False], 
+          TemplateBox[{"\"20 Jul 2022\"", "\",\"", 
+            TemplateBox[{"\"12:08 pm\"", "\" \"", 
+              StyleBox["\"CDT\"", 
+               GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"]}, 
+           "RowDefault"], 
+          StyleBox["\")\"", 
+           GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"], 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"Flight\"", ",", "\"202207200000214603\""}], "]"}], 
+        "\"Entity[\\\"Flight\\\", \\\"202207200000214603\\\"]\"", 
+        "\"Flight\""},
+       "Entity"], ",", 
+      TemplateBox[{
+        TemplateBox[{"\"tail number \"", "\"NKS3160\"", 
+          RowBox[{"-", "1"}], 
+          StyleBox["\" (departing \"", 
+           GrayLevel[0.5], StripOnInput -> False], 
+          TemplateBox[{"\"20 Jul 2022\"", "\",\"", 
+            TemplateBox[{"\"1:09 pm\"", "\" \"", 
+              StyleBox["\"EDT\"", 
+               GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"]}, 
+           "RowDefault"], 
+          StyleBox["\")\"", 
+           GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"], 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"Flight\"", ",", "\"202207200000238138\""}], "]"}], 
+        "\"Entity[\\\"Flight\\\", \\\"202207200000238138\\\"]\"", 
+        "\"Flight\""},
+       "Entity"], ",", 
+      TemplateBox[{
+        TemplateBox[{"\"tail number \"", "\"N54CA\"", 
+          RowBox[{"-", "1"}], 
+          StyleBox["\" (departing \"", 
+           GrayLevel[0.5], StripOnInput -> False], 
+          TemplateBox[{"\"20 Jul 2022\"", "\",\"", 
+            TemplateBox[{"\"2:02 pm\"", "\" \"", 
+              StyleBox["\"EDT\"", 
+               GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"]}, 
+           "RowDefault"], 
+          StyleBox["\")\"", 
+           GrayLevel[0.5], StripOnInput -> False]}, "RowDefault"], 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"Flight\"", ",", "\"202207200000230700\""}], "]"}], 
+        "\"Entity[\\\"Flight\\\", \\\"202207200000230700\\\"]\"", 
+        "\"Flight\""},
+       "Entity"]}], "}"}]}], ",", 
+   RowBox[{"\<\"SkyMap\"\>", "\[Rule]", 
+    TemplateBox[{
+      GraphicsBox[{
+        RGBColor[0.6, 0.4, 0.2], 
+        Thickness[0.003], 
+        LineBox[CompressedData["
+1:eJwBcQGO/iFib1JlAgAAABYAAAACAAAAQHjcah8v7j8mOSXWv0DVPyGOW5NU
+He0/u7ul67qN0j8tNeFgB77qP3GOOR2nK8s/OVOZ9b446D/XlR7lMiPCP1TE
+dAg0leU/EBkbNiLFsz/uu4gT6djiP82XKWwvkpI/vL0H4uIH4D+gzH1ZpHyi
+v6L6Mis7Sto/eqeqbTb9tb+gdoAFsmXUP2/mGBpJ1cC/teCCWy/LzD9dn0vn
+aCnGv8jC7tkamcA/xhhoJJf+yr+n1MuNz+SgP1z+3jERVs+/cD9OEcuisL9s
+G5QhZJfRv2ikaUJIBMW/n5olcKdC07/A9Tm9yu7QvwFhHzvPqdS/bS0b8udt
+179hY9K1VsjVv3ETvsnX/t2/yLREyOOX1r9OTANDelDiv83CKozID9e/Al7M
+D7ap5b801GaaRiTXv4WHCRh9Cum/M4EoWnTF1r9H2d5XtnHsv1rq8puP3dW/
+rLffiOs37r/gC4ERgw7Vv6yJvcs=
+         "]], {
+         InsetBox[
+          StyleBox[
+          "\"Sun\"", StripOnInput -> False, LineColor -> GrayLevel[0.5], 
+           FrontFaceColor -> GrayLevel[0.5], BackFaceColor -> GrayLevel[0.5], 
+           GraphicsColor -> GrayLevel[0.5], FontColor -> GrayLevel[0.5]], {
+          0.11602862020083628`, -0.09638436630356136}], {
+          RGBColor[1., 0.8305, 0.2606], {
+           EdgeForm[{
+             RGBColor[0.91855, 0.4613, 0.0019], 
+             Thickness[0.002]}], 
+           
+           DiskBox[{0.21396856539430262`, -0.17774256514224532`}, 
+            0.05]}}}, {}, {
+         GrayLevel[0], {
+          RGBColor[0.84, 0.84, 0.84], 
+          Thickness[0.008], 
+          CircleBox[{0, 0}, 1]}, {
+          GrayLevel[0.7], 
+          PointSize[Large], 
+          Thickness[Large], 
+          Opacity[1], 
+          Arrowheads[{{0.05, 1, 
+             GraphicsBox[{
+               Opacity[1], 
+               InsetBox[
+                FormBox[
+                 StyleBox[
+                 "\"\:2708\"", FontSize -> 22, FontColor -> RGBColor[1, 0, 0],
+                   FontFamily -> "MS Mincho", StripOnInput -> False], 
+                 TraditionalForm], {0, 0}]}]}}], {}, {
+           GrayLevel[0.715]}, {
+           GrayLevel[0.73]}, {
+           GrayLevel[0.745]}, {
+           GrayLevel[0.76]}, {
+           GrayLevel[0.7749999999999999]}, {
+           GrayLevel[0.7899999999999999]}, {
+           GrayLevel[0.8049999999999999]}, {
+           GrayLevel[0.82]}, {
+           GrayLevel[0.835]}, {
+           GrayLevel[0.85]}, {
+           GrayLevel[0.865]}, {
+           GrayLevel[0.88]}, {
+           GrayLevel[0.895]}, {
+           GrayLevel[0.9099999999999999]}, {
+           GrayLevel[0.925]}, {
+           GrayLevel[0.94]}, {
+           GrayLevel[0.955]}, {
+           GrayLevel[0.97]}, {
+           GrayLevel[0.985], {}, {
+            Opacity[0], 
+            TagBox[
+             TooltipBox[
+              
+              ArrowBox[{{0.9542448359625089, 0.3123159517614324}, {
+               0.9535434700932782, 0.3125627318624357}}], 
+              RowBox[{"Entity", "[", 
+                RowBox[{"\"Flight\"", ",", "\"202207200000244717\""}], "]"}]],
+              Annotation[#, 
+              Entity["Flight", "202207200000244717"], "Tooltip"]& ]}, {
+            GrayLevel[0.7], 
+            Thickness[Large], 
+            Opacity[1], {}, {
+             GrayLevel[0.715]}, {
+             GrayLevel[0.73]}, {
+             GrayLevel[0.745]}, {
+             GrayLevel[0.76]}, {
+             GrayLevel[0.7749999999999999]}, {
+             GrayLevel[0.7899999999999999]}, {
+             GrayLevel[0.8049999999999999]}, {
+             GrayLevel[0.82]}, {
+             GrayLevel[0.835]}, {
+             GrayLevel[0.85]}, {
+             GrayLevel[0.865]}, {
+             GrayLevel[0.88]}, {
+             GrayLevel[0.895]}, {
+             GrayLevel[0.9099999999999999]}, {
+             GrayLevel[0.925]}, {
+             GrayLevel[0.94]}, {
+             GrayLevel[0.955]}, {
+             GrayLevel[0.97]}, {
+             GrayLevel[0.985], {}, {
+              Opacity[0], 
+              TagBox[
+               TooltipBox[
+                
+                ArrowBox[{{-0.6325113140777663, -0.7931410042555913}, \
+{-0.6321351858224823, -0.792352142546109}}], 
+                RowBox[{"Entity", "[", 
+                  RowBox[{"\"Flight\"", ",", "\"202207200000280113\""}], 
+                  "]"}]], Annotation[#, 
+                Entity["Flight", "202207200000280113"], "Tooltip"]& ]}, {
+              GrayLevel[0.7], 
+              Thickness[Large], 
+              Opacity[1], 
+              
+              LineBox[{{-0.9451298271262415, 
+               0.24009805523483788`}, {-0.946986090345554, 
+               0.23742023636158002`}}], {
+               GrayLevel[0.715], 
+               
+               LineBox[{{-0.946986090345554, 
+                0.23742023636158002`}, {-0.9493559826447683, 
+                0.2327985941192462}}]}, {
+               GrayLevel[0.73], 
+               
+               LineBox[{{-0.9493559826447683, 
+                0.2327985941192462}, {-0.9514551960950702, 
+                0.2286658273736474}}]}, {
+               GrayLevel[0.745], 
+               
+               LineBox[{{-0.9514551960950702, 
+                0.2286658273736474}, {-0.9538955842266502, 
+                0.2238730407668206}}]}, {
+               GrayLevel[0.76], 
+               
+               LineBox[{{-0.9538955842266502, 
+                0.2238730407668206}, {-0.9560845632749018, 
+                0.21957583422064925`}}]}, {
+               GrayLevel[0.7749999999999999], 
+               
+               LineBox[{{-0.9560845632749018, 
+                0.21957583422064925`}, {-0.957829784154458, 
+                0.2161100717833322}}]}, {
+               GrayLevel[0.7899999999999999], 
+               
+               LineBox[{{-0.957829784154458, 
+                0.2161100717833322}, {-0.9596647655885686, 
+                0.2124961814346837}}]}, {
+               GrayLevel[0.8049999999999999], 
+               
+               LineBox[{{-0.9596647655885686, 
+                0.2124961814346837}, {-0.9615028426427977, 
+                0.20889476021054512`}}]}, {
+               GrayLevel[0.82], 
+               
+               LineBox[{{-0.9615028426427977, 
+                0.20889476021054512`}, {-0.9628176467465533, 
+                0.20621920106337546`}}]}, {
+               GrayLevel[0.835], 
+               
+               LineBox[{{-0.9628176467465533, 
+                0.20621920106337546`}, {-0.9646538035209513, 
+                0.20250630350451404`}}]}, {
+               GrayLevel[0.85], 
+               
+               LineBox[{{-0.9646538035209513, 
+                0.20250630350451404`}, {-0.9658102691176792, 
+                0.20015284316160517`}}]}, {
+               GrayLevel[0.865], 
+               
+               LineBox[{{-0.9658102691176792, 
+                0.20015284316160517`}, {-0.9673303072622391, 
+                0.19722250024082286`}}]}, {
+               GrayLevel[0.88], 
+               
+               LineBox[{{-0.9673303072622391, 
+                0.19722250024082286`}, {-0.9687835740026483, 
+                0.19443652443472012`}}]}, {
+               GrayLevel[0.895], 
+               
+               LineBox[{{-0.9687835740026483, 
+                0.19443652443472012`}, {-0.970214806925265, 
+                0.19150001840016928`}}]}, {
+               GrayLevel[0.9099999999999999], 
+               
+               LineBox[{{-0.970214806925265, 
+                0.19150001840016928`}, {-0.9714963252977189, 
+                0.18899316401707825`}}]}, {
+               GrayLevel[0.925], 
+               
+               LineBox[{{-0.9714963252977189, 
+                0.18899316401707825`}, {-0.9725530068093511, 
+                0.1868790757812097}}]}, {
+               GrayLevel[0.94], 
+               
+               LineBox[{{-0.9725530068093511, 
+                0.1868790757812097}, {-0.9735067117120992, 
+                0.18604831158968368`}}]}, {
+               GrayLevel[0.955], 
+               
+               LineBox[{{-0.9735067117120992, 
+                0.18604831158968368`}, {-0.9743640260790659, 
+                0.1855547528370375}}]}, {
+               GrayLevel[0.97], 
+               
+               LineBox[{{-0.9743640260790659, 
+                0.1855547528370375}, {-0.9740631796453082, 
+                0.1906994009213539}}]}, {
+               GrayLevel[0.985], 
+               
+               LineBox[{{-0.9740631796453082, 
+                0.1906994009213539}, {-0.9735353626649383, 
+                0.19696480816611467`}}], {
+                Opacity[0], 
+                TagBox[
+                 TooltipBox[
+                  
+                  ArrowBox[{{-0.946986090345554, 
+                   0.23742023636158002`}, {-0.9451298271262415, 
+                   0.24009805523483788`}}], 
+                  RowBox[{"Entity", "[", 
+                    RowBox[{"\"Flight\"", ",", "\"202207200000271030\""}], 
+                    "]"}]], Annotation[#, 
+                  Entity["Flight", "202207200000271030"], "Tooltip"]& ]}, {
+                GrayLevel[0.7], 
+                Thickness[Large], 
+                Opacity[1], 
+                
+                LineBox[{{-0.7772189057027891, 
+                 0.5972742500907265}, {-0.7785483426967542, 
+                 0.5972780114447475}}], {
+                 GrayLevel[0.715], 
+                 
+                 LineBox[{{-0.7785483426967542, 
+                  0.5972780114447475}, {-0.7798516409272502, 
+                  0.5971743401376878}}]}, {
+                 GrayLevel[0.73], 
+                 
+                 LineBox[{{-0.7798516409272502, 
+                  0.5971743401376878}, {-0.7810266128936857, 
+                  0.5971410550100228}}]}, {
+                 GrayLevel[0.745], 
+                 
+                 LineBox[{{-0.7810266128936857, 
+                  0.5971410550100228}, {-0.7821837929003155, 
+                  0.5970975124330944}}]}, {
+                 GrayLevel[0.76], 
+                 
+                 LineBox[{{-0.7821837929003155, 
+                  0.5970975124330944}, {-0.7832636256397689, 
+                  0.5971833684664408}}]}, {
+                 GrayLevel[0.7749999999999999], 
+                 
+                 LineBox[{{-0.7832636256397689, 
+                  0.5971833684664408}, {-0.7842536182749149, 
+                  0.5973631207010368}}]}, {
+                 GrayLevel[0.7899999999999999], 
+                 
+                 LineBox[{{-0.7842536182749149, 
+                  0.5973631207010368}, {-0.7854019030936963, 
+                  0.5972210579312164}}]}, {
+                 GrayLevel[0.8049999999999999], 
+                 
+                 LineBox[{{-0.7854019030936963, 
+                  0.5972210579312164}, {-0.786441178388471, 
+                  0.5972723053182836}}]}, {
+                 GrayLevel[0.82], 
+                 
+                 LineBox[{{-0.786441178388471, 
+                  0.5972723053182836}, {-0.7873753277870843, 
+                  0.5973041716962977}}]}, {
+                 GrayLevel[0.835], 
+                 
+                 LineBox[{{-0.7873753277870843, 
+                  0.5973041716962977}, {-0.7883348186889174, 
+                  0.5973771930834401}}]}, {
+                 GrayLevel[0.85], 
+                 
+                 LineBox[{{-0.7883348186889174, 
+                  0.5973771930834401}, {-0.7892687515421426, 
+                  0.5974671972460455}}]}, {
+                 GrayLevel[0.865], 
+                 
+                 LineBox[{{-0.7892687515421426, 
+                  0.5974671972460455}, {-0.7901628332923847, 
+                  0.5974697760123143}}]}, {
+                 GrayLevel[0.88], 
+                 
+                 LineBox[{{-0.7901628332923847, 
+                  0.5974697760123143}, {-0.7910942842866263, 
+                  0.5974537074978865}}]}, {
+                 GrayLevel[0.895], 
+                 
+                 LineBox[{{-0.7910942842866263, 
+                  0.5974537074978865}, {-0.7918869315010643, 
+                  0.5974938996068604}}]}, {
+                 GrayLevel[0.9099999999999999], 
+                 
+                 LineBox[{{-0.7918869315010643, 
+                  0.5974938996068604}, {-0.7926870491122385, 
+                  0.5976448860485769}}]}, {
+                 GrayLevel[0.925], 
+                 
+                 LineBox[{{-0.7926870491122385, 
+                  0.5976448860485769}, {-0.7934157248426985, 
+                  0.5978327562663991}}]}, {
+                 GrayLevel[0.94], 
+                 
+                 LineBox[{{-0.7934157248426985, 
+                  0.5978327562663991}, {-0.7941292135190894, 
+                  0.5979499224573483}}]}, {
+                 GrayLevel[0.955], 
+                 
+                 LineBox[{{-0.7941292135190894, 
+                  0.5979499224573483}, {-0.7950057279098555, 
+                  0.5979413378290397}}]}, {
+                 GrayLevel[0.97], 
+                 
+                 LineBox[{{-0.7950057279098555, 
+                  0.5979413378290397}, {-0.7956842752510146, 
+                  0.5980169180551068}}]}, {
+                 GrayLevel[0.985], 
+                 
+                 LineBox[{{-0.7956842752510146, 
+                  0.5980169180551068}, {-0.7964694804440721, 
+                  0.5979777973859881}}], {
+                  Opacity[0], 
+                  TagBox[
+                   TooltipBox[
+                    
+                    ArrowBox[{{-0.7785483426967542, 
+                    0.5972780114447475}, {-0.7772189057027891, 
+                    0.5972742500907265}}], 
+                    RowBox[{"Entity", "[", 
+                    RowBox[{"\"Flight\"", ",", "\"202207200000294785\""}], 
+                    "]"}]], Annotation[#, 
+                    Entity["Flight", "202207200000294785"], "Tooltip"]& ]}, {
+                  GrayLevel[0.7], 
+                  Thickness[Large], 
+                  Opacity[1], 
+                  
+                  LineBox[{{-0.9659000550047357, 
+                   0.16694507559113975`}, {-0.9664795650893182, 
+                   0.16879907452989665`}}], {
+                   GrayLevel[0.715], 
+                   
+                   LineBox[{{-0.9664795650893182, 
+                    0.16879907452989665`}, {-0.9671356412979607, 
+                    0.17101749557207524`}}]}, {
+                   GrayLevel[0.73], 
+                   
+                   LineBox[{{-0.9671356412979607, 
+                    0.17101749557207524`}, {-0.9679456643445248, 
+                    0.17365150155525788`}}]}, {
+                   GrayLevel[0.745], 
+                   
+                   LineBox[{{-0.9679456643445248, 
+                    0.17365150155525788`}, {-0.9685221036684878, 
+                    0.175194015355946}}]}, {
+                   GrayLevel[0.76], 
+                   
+                   LineBox[{{-0.9685221036684878, 
+                    0.175194015355946}, {-0.9690838858533777, 
+                    0.17676580842272716`}}]}, {
+                   GrayLevel[0.7749999999999999], 
+                   
+                   LineBox[{{-0.9690838858533777, 
+                    0.17676580842272716`}, {-0.969727516842517, 
+                    0.17891406922774167`}}]}, {
+                   GrayLevel[0.7899999999999999], 
+                   
+                   LineBox[{{-0.969727516842517, 
+                    0.17891406922774167`}, {-0.9703834027409, 
+                    0.18117224191139555`}}]}, {
+                   GrayLevel[0.8049999999999999], 
+                   
+                   LineBox[{{-0.9703834027409, 
+                    0.18117224191139555`}, {-0.9703482517152656, 
+                    0.18316647848815515`}}]}, {
+                   GrayLevel[0.82], 
+                   
+                   LineBox[{{-0.9703482517152656, 
+                    0.18316647848815515`}, {-0.9701873033698769, 
+                    0.18747601706411093`}}]}, {
+                   GrayLevel[0.835], 
+                   
+                   LineBox[{{-0.9701873033698769, 
+                    0.18747601706411093`}, {-0.9700184912315551, 
+                    0.19166633275596698`}}]}, {
+                   GrayLevel[0.85], 
+                   
+                   LineBox[{{-0.9700184912315551, 
+                    0.19166633275596698`}, {-0.9695971355316026, 
+                    0.19784769525868176`}}]}, {
+                   GrayLevel[0.865], 
+                   
+                   LineBox[{{-0.9695971355316026, 
+                    0.19784769525868176`}, {-0.9691290981057806, 
+                    0.2040917842079342}}]}, {
+                   GrayLevel[0.88], 
+                   
+                   LineBox[{{-0.9691290981057806, 
+                    0.2040917842079342}, {-0.9686584404788057, 
+                    0.20983112775645973`}}]}, {
+                   GrayLevel[0.895], 
+                   
+                   LineBox[{{-0.9686584404788057, 
+                    0.20983112775645973`}, {-0.9681952001487231, 
+                    0.2148954628676991}}]}, {
+                   GrayLevel[0.9099999999999999], 
+                   
+                   LineBox[{{-0.9681952001487231, 
+                    0.2148954628676991}, {-0.9677302442100805, 
+                    0.2198433131577129}}]}, {
+                   GrayLevel[0.925], 
+                   
+                   LineBox[{{-0.9677302442100805, 
+                    0.2198433131577129}, {-0.9672890667498243, 
+                    0.22482510827555538`}}]}, {
+                   GrayLevel[0.94], 
+                   
+                   LineBox[{{-0.9672890667498243, 
+                    0.22482510827555538`}, {-0.9668447278013529, 
+                    0.22965745755494663`}}]}, {
+                   GrayLevel[0.955], 
+                   
+                   LineBox[{{-0.9668447278013529, 
+                    0.22965745755494663`}, {-0.9663934766445329, 
+                    0.23427581245296344`}}]}, {
+                   GrayLevel[0.97], 
+                   
+                   LineBox[{{-0.9663934766445329, 
+                    0.23427581245296344`}, {-0.9659372172162736, 
+                    0.23871058872785245`}}]}, {
+                   GrayLevel[0.985], 
+                   
+                   LineBox[{{-0.9659372172162736, 
+                    0.23871058872785245`}, {-0.965489947329102, 
+                    0.24297153159027537`}}], {
+                    Opacity[0], 
+                    TagBox[
+                    TooltipBox[
+                    
+                    ArrowBox[{{-0.9664795650893182, 
+                    0.16879907452989665`}, {-0.9659000550047357, 
+                    0.16694507559113975`}}], 
+                    RowBox[{"Entity", "[", 
+                    RowBox[{"\"Flight\"", ",", "\"202207200000202201\""}], 
+                    "]"}]], Annotation[#, 
+                    Entity["Flight", "202207200000202201"], "Tooltip"]& ]}, {
+                    GrayLevel[0.7], 
+                    Thickness[Large], 
+                    Opacity[1], 
+                    
+                    LineBox[{{-0.971908665195898, 
+                    0.21137559045531334`}, {-0.972446549239095, 
+                    0.2129656655535925}}], {
+                    GrayLevel[0.715], 
+                    
+                    LineBox[{{-0.972446549239095, 
+                    0.2129656655535925}, {-0.9728453554014672, 
+                    0.21372482751518437`}}]}, {
+                    GrayLevel[0.73], 
+                    
+                    LineBox[{{-0.9728453554014672, 
+                    0.21372482751518437`}, {-0.9727891406201409, 
+                    0.21728457914432775`}}]}, {
+                    GrayLevel[0.745], 
+                    
+                    LineBox[{{-0.9727891406201409, 
+                    0.21728457914432775`}, {-0.9723657194242618, 
+                    0.2216658814388441}}]}, {
+                    GrayLevel[0.76], 
+                    
+                    LineBox[{{-0.9723657194242618, 
+                    0.2216658814388441}, {-0.9718306147229973, 
+                    0.22653804279568868`}}]}, {
+                    GrayLevel[0.7749999999999999], 
+                    
+                    LineBox[{{-0.9718306147229973, 
+                    0.22653804279568868`}, {-0.9711952559500844, 
+                    0.2322361341458016}}]}, {
+                    GrayLevel[0.7899999999999999], 
+                    
+                    LineBox[{{-0.9711952559500844, 
+                    0.2322361341458016}, {-0.9706104263746754, 
+                    0.23725040145584064`}}]}, {
+                    GrayLevel[0.8049999999999999], 
+                    
+                    LineBox[{{-0.9706104263746754, 
+                    0.23725040145584064`}, {-0.9701897318552749, 
+                    0.2410463876050976}}]}, {
+                    GrayLevel[0.82], 
+                    
+                    LineBox[{{-0.9701897318552749, 
+                    0.2410463876050976}, {-0.969878558881346, 
+                    0.24358895915505602`}}]}, {
+                    GrayLevel[0.835]}, {
+                    GrayLevel[0.85]}, {
+                    GrayLevel[0.865]}, {
+                    GrayLevel[0.88]}, {
+                    GrayLevel[0.895]}, {
+                    GrayLevel[0.9099999999999999]}, {
+                    GrayLevel[0.925]}, {
+                    GrayLevel[0.94]}, {
+                    GrayLevel[0.955]}, {
+                    GrayLevel[0.97]}, {
+                    GrayLevel[0.985], {}, {
+                    Opacity[0], 
+                    TagBox[
+                    TooltipBox[
+                    
+                    ArrowBox[{{-0.972446549239095, 
+                    0.2129656655535925}, {-0.971908665195898, 
+                    0.21137559045531334`}}], 
+                    RowBox[{"Entity", "[", 
+                    RowBox[{"\"Flight\"", ",", "\"202207200000282406\""}], 
+                    "]"}]], Annotation[#, 
+                    Entity["Flight", "202207200000282406"], "Tooltip"]& ]}, {
+                    GrayLevel[0.7], 
+                    Thickness[Large], 
+                    Opacity[1], 
+                    
+                    LineBox[{{-0.9293621427624233, 
+                    0.2709294240328597}, {-0.9295405819128972, 
+                    0.27513117486499505`}}], {
+                    GrayLevel[0.715], 
+                    
+                    LineBox[{{-0.9295405819128972, 
+                    0.27513117486499505`}, {-0.9297221821134944, 
+                    0.27977297758233405`}}]}, {
+                    GrayLevel[0.73], 
+                    
+                    LineBox[{{-0.9297221821134944, 
+                    0.27977297758233405`}, {-0.9299229222872174, 
+                    0.2832145729510002}}]}, {
+                    GrayLevel[0.745], 
+                    
+                    LineBox[{{-0.9299229222872174, 
+                    0.2832145729510002}, {-0.9300529060332969, 
+                    0.2874803308109202}}]}, {
+                    GrayLevel[0.76], 
+                    
+                    LineBox[{{-0.9300529060332969, 
+                    0.2874803308109202}, {-0.9301738575789588, 
+                    0.29144032207129383`}}]}, {
+                    GrayLevel[0.7749999999999999], 
+                    
+                    LineBox[{{-0.9301738575789588, 
+                    0.29144032207129383`}, {-0.930365326537187, 
+                    0.294297623386903}}]}, {
+                    GrayLevel[0.7899999999999999], 
+                    
+                    LineBox[{{-0.930365326537187, 
+                    0.294297623386903}, {-0.9305170291843973, 
+                    0.2980870881468727}}]}, {
+                    GrayLevel[0.8049999999999999], 
+                    
+                    LineBox[{{-0.9305170291843973, 
+                    0.2980870881468727}, {-0.9306360461186336, 
+                    0.30100452512346654`}}]}, {
+                    GrayLevel[0.82], 
+                    
+                    LineBox[{{-0.9306360461186336, 
+                    0.30100452512346654`}, {-0.9307518630188086, 
+                    0.3042448516033936}}]}, {
+                    GrayLevel[0.835], 
+                    
+                    LineBox[{{-0.9307518630188086, 
+                    0.3042448516033936}, {-0.9308679752141155, 
+                    0.3069811023538022}}]}, {
+                    GrayLevel[0.85], 
+                    
+                    LineBox[{{-0.9308679752141155, 
+                    0.3069811023538022}, {-0.9309914125176068, 
+                    0.30942190155041177`}}]}, {
+                    GrayLevel[0.865], 
+                    
+                    LineBox[{{-0.9309914125176068, 
+                    0.30942190155041177`}, {-0.9311061375807107, 
+                    0.3122608458641577}}]}, {
+                    GrayLevel[0.88], 
+                    
+                    LineBox[{{-0.9311061375807107, 
+                    0.3122608458641577}, {-0.9312082647203263, 
+                    0.3147781671630907}}]}, {
+                    GrayLevel[0.895], 
+                    
+                    LineBox[{{-0.9312082647203263, 
+                    0.3147781671630907}, {-0.9312994959237588, 
+                    0.31716674479010754`}}]}, {
+                    GrayLevel[0.9099999999999999], 
+                    
+                    LineBox[{{-0.9312994959237588, 
+                    0.31716674479010754`}, {-0.931416076521425, 
+                    0.3195595958134891}}]}, {
+                    GrayLevel[0.925], 
+                    
+                    LineBox[{{-0.931416076521425, 
+                    0.3195595958134891}, {-0.9315646479036417, 
+                    0.321971035657413}}]}, {
+                    GrayLevel[0.94], 
+                    
+                    LineBox[{{-0.9315646479036417, 
+                    0.321971035657413}, {-0.9317063387324656, 
+                    0.3242833112030804}}]}, {
+                    GrayLevel[0.955], 
+                    
+                    LineBox[{{-0.9317063387324656, 
+                    0.3242833112030804}, {-0.9318200063163302, 
+                    0.326085419217493}}]}, {
+                    GrayLevel[0.97], 
+                    
+                    LineBox[{{-0.9318200063163302, 
+                    0.326085419217493}, {-0.9319830217053527, 
+                    0.32827781030246556`}}]}, {
+                    GrayLevel[0.985], 
+                    
+                    LineBox[{{-0.9319830217053527, 
+                    0.32827781030246556`}, {-0.9320544759123618, 
+                    0.3302717947808622}}], {
+                    Opacity[0], 
+                    TagBox[
+                    TooltipBox[
+                    
+                    ArrowBox[{{-0.9295405819128972, 
+                    0.27513117486499505`}, {-0.9293621427624233, 
+                    0.2709294240328597}}], 
+                    RowBox[{"Entity", "[", 
+                    RowBox[{"\"Flight\"", ",", "\"202207200000196847\""}], 
+                    "]"}]], Annotation[#, 
+                    Entity["Flight", "202207200000196847"], "Tooltip"]& ]}, {
+                    GrayLevel[0.7], 
+                    Thickness[Large], 
+                    Opacity[1], {}, {
+                    GrayLevel[0.715]}, {
+                    GrayLevel[0.73]}, {
+                    GrayLevel[0.745]}, {
+                    GrayLevel[0.76]}, {
+                    GrayLevel[0.7749999999999999]}, {
+                    GrayLevel[0.7899999999999999]}, {
+                    GrayLevel[0.8049999999999999]}, {
+                    GrayLevel[0.82]}, {
+                    GrayLevel[0.835]}, {
+                    GrayLevel[0.85]}, {
+                    GrayLevel[0.865]}, {
+                    GrayLevel[0.88]}, {
+                    GrayLevel[0.895]}, {
+                    GrayLevel[0.9099999999999999]}, {
+                    GrayLevel[0.925]}, {
+                    GrayLevel[0.94]}, {
+                    GrayLevel[0.955]}, {
+                    GrayLevel[0.97]}, {
+                    GrayLevel[0.985], {}, {
+                    Opacity[0], 
+                    TagBox[
+                    TooltipBox[
+                    
+                    ArrowBox[{{-0.664199169353864, 
+                    0.7604961409910893}, {-0.6696269261106118, 
+                    0.754486001873916}}], 
+                    RowBox[{"Entity", "[", 
+                    RowBox[{"\"Flight\"", ",", "\"202207200000283221\""}], 
+                    "]"}]], Annotation[#, 
+                    Entity["Flight", "202207200000283221"], "Tooltip"]& ]}, {
+                    GrayLevel[0.7], 
+                    Thickness[Large], 
+                    Opacity[1], 
+                    
+                    LineBox[{{0.8904943787926096, -0.45322094835507143`}, {
+                    0.8870400328946693, -0.46094921584341636`}}], {
+                    GrayLevel[0.715], 
+                    
+                    LineBox[{{0.8870400328946693, -0.46094921584341636`}, {
+                    0.8844443502532053, -0.46664568068844847`}}]}, {
+                    GrayLevel[0.73]}, {
+                    GrayLevel[0.745]}, {
+                    GrayLevel[0.76]}, {
+                    GrayLevel[0.7749999999999999]}, {
+                    GrayLevel[0.7899999999999999]}, {
+                    GrayLevel[0.8049999999999999]}, {
+                    GrayLevel[0.82]}, {
+                    GrayLevel[0.835]}, {
+                    GrayLevel[0.85]}, {
+                    GrayLevel[0.865]}, {
+                    GrayLevel[0.88]}, {
+                    GrayLevel[0.895]}, {
+                    GrayLevel[0.9099999999999999]}, {
+                    GrayLevel[0.925]}, {
+                    GrayLevel[0.94]}, {
+                    GrayLevel[0.955]}, {
+                    GrayLevel[0.97]}, {
+                    GrayLevel[0.985], {}, {
+                    Opacity[0], 
+                    TagBox[
+                    TooltipBox[
+                    
+                    ArrowBox[{{0.8870400328946693, -0.46094921584341636`}, {
+                    0.8904943787926096, -0.45322094835507143`}}], 
+                    RowBox[{"Entity", "[", 
+                    RowBox[{"\"Flight\"", ",", "\"202207200000214603\""}], 
+                    "]"}]], Annotation[#, 
+                    Entity["Flight", "202207200000214603"], "Tooltip"]& ]}, {
+                    GrayLevel[0.7], 
+                    Thickness[Large], 
+                    Opacity[1], 
+                    
+                    LineBox[{{-0.16924883979494215`, -0.9729857685098403}, \
+{-0.16681994041901446`, -0.9741170791031213}}], {
+                    GrayLevel[0.715], 
+                    
+                    LineBox[{{-0.16681994041901446`, -0.9741170791031213}, \
+{-0.16454286325690964`, -0.975215642478569}}]}, {
+                    GrayLevel[0.73], 
+                    
+                    LineBox[{{-0.16454286325690964`, -0.975215642478569}, \
+{-0.16170980672924987`, -0.9765746064863454}}]}, {
+                    GrayLevel[0.745], 
+                    
+                    LineBox[{{-0.16170980672924987`, -0.9765746064863454}, \
+{-0.15914949892325925`, -0.9777474212295563}}]}, {
+                    GrayLevel[0.76], 
+                    
+                    LineBox[{{-0.15914949892325925`, -0.9777474212295563}, \
+{-0.15708483005580437`, -0.9787369594006036}}]}, {
+                    GrayLevel[0.7749999999999999], 
+                    
+                    LineBox[{{-0.15708483005580437`, -0.9787369594006036}, \
+{-0.15495711549161406`, -0.9797935174579855}}]}, {
+                    GrayLevel[0.7899999999999999], 
+                    
+                    LineBox[{{-0.15495711549161406`, -0.9797935174579855}, \
+{-0.15310588965700106`, -0.9807326599623595}}]}, {
+                    GrayLevel[0.8049999999999999], 
+                    
+                    LineBox[{{-0.15310588965700106`, -0.9807326599623595}, \
+{-0.15133786600987403`, -0.9816313775801794}}]}, {
+                    GrayLevel[0.82], 
+                    
+                    LineBox[{{-0.15133786600987403`, -0.9816313775801794}, \
+{-0.14885074906995505`, -0.982729457269564}}]}, {
+                    GrayLevel[0.835], 
+                    
+                    LineBox[{{-0.14885074906995505`, -0.982729457269564}, \
+{-0.1471945751472956, -0.9835851156686679}}]}, {
+                    GrayLevel[0.85], 
+                    
+                    LineBox[{{-0.1471945751472956, -0.9835851156686679}, \
+{-0.14511853128157703`, -0.9845208234559227}}]}, {
+                    GrayLevel[0.865], 
+                    
+                    LineBox[{{-0.14511853128157703`, -0.9845208234559227}, \
+{-0.14351693605523347`, -0.985344272332924}}]}, {
+                    GrayLevel[0.88], 
+                    
+                    LineBox[{{-0.14351693605523347`, -0.985344272332924}, \
+{-0.1419605330172897, -0.9861490551025487}}]}, {
+                    GrayLevel[0.895], 
+                    
+                    LineBox[{{-0.1419605330172897, -0.9861490551025487}, \
+{-0.14017702574923005`, -0.987040794777691}}]}, {
+                    GrayLevel[0.9099999999999999], 
+                    
+                    LineBox[{{-0.14017702574923005`, -0.987040794777691}, \
+{-0.13841457058107018`, -0.987924315730343}}]}, {
+                    GrayLevel[0.925], 
+                    
+                    LineBox[{{-0.13841457058107018`, -0.987924315730343}, \
+{-0.13671863328805384`, -0.9887778939300356}}]}, {
+                    GrayLevel[0.94], 
+                    
+                    LineBox[{{-0.13671863328805384`, -0.9887778939300356}, \
+{-0.1351146977243556, -0.9895788388710908}}]}, {
+                    GrayLevel[0.955], 
+                    
+                    LineBox[{{-0.1351146977243556, -0.9895788388710908}, \
+{-0.13355767665972745`, -0.9903621769130454}}]}, {
+                    GrayLevel[0.97], 
+                    
+                    LineBox[{{-0.13355767665972745`, -0.9903621769130454}, \
+{-0.1321419246347467, -0.9911373573294139}}]}, {
+                    GrayLevel[0.985], 
+                    
+                    LineBox[{{-0.1321419246347467, -0.9911373573294139}, \
+{-0.13190438702365648`, -0.9912624438986446}}], {
+                    Opacity[0], 
+                    TagBox[
+                    TooltipBox[
+                    
+                    ArrowBox[{{-0.16681994041901446`, -0.9741170791031213}, \
+{-0.16924883979494215`, -0.9729857685098403}}], 
+                    RowBox[{"Entity", "[", 
+                    RowBox[{"\"Flight\"", ",", "\"202207200000238138\""}], 
+                    "]"}]], Annotation[#, 
+                    Entity["Flight", "202207200000238138"], "Tooltip"]& ]}, {
+                    GrayLevel[0.7], 
+                    Thickness[Large], 
+                    Opacity[1], 
+                    
+                    LineBox[{{-0.9519459081018972, 
+                    0.11971884138965126`}, {-0.9532934101918611, 
+                    0.12418809026368222`}}], {
+                    GrayLevel[0.715], 
+                    
+                    LineBox[{{-0.9532934101918611, 
+                    0.12418809026368222`}, {-0.9545506570950903, 
+                    0.128405171487669}}]}, {
+                    GrayLevel[0.73], 
+                    
+                    LineBox[{{-0.9545506570950903, 
+                    0.128405171487669}, {-0.9556455085713543, 
+                    0.13216964888564106`}}]}, {
+                    GrayLevel[0.745], 
+                    
+                    LineBox[{{-0.9556455085713543, 
+                    0.13216964888564106`}, {-0.9566468916962173, 
+                    0.13566626104704976`}}]}, {
+                    GrayLevel[0.76], 
+                    
+                    LineBox[{{-0.9566468916962173, 
+                    0.13566626104704976`}, {-0.9576558273680948, 
+                    0.13924310360831968`}}]}, {
+                    GrayLevel[0.7749999999999999], 
+                    
+                    LineBox[{{-0.9576558273680948, 
+                    0.13924310360831968`}, {-0.9588397578506245, 
+                    0.143566943651296}}]}, {
+                    GrayLevel[0.7899999999999999], 
+                    
+                    LineBox[{{-0.9588397578506245, 
+                    0.143566943651296}, {-0.9599449915103058, 
+                    0.14764073095059455`}}]}, {
+                    GrayLevel[0.8049999999999999], 
+                    
+                    LineBox[{{-0.9599449915103058, 
+                    0.14764073095059455`}, {-0.9608658518662326, 
+                    0.1507459466031573}}]}, {
+                    GrayLevel[0.82], 
+                    
+                    LineBox[{{-0.9608658518662326, 
+                    0.1507459466031573}, {-0.9617128789311145, 
+                    0.15353001815762682`}}]}, {
+                    GrayLevel[0.835], 
+                    
+                    LineBox[{{-0.9617128789311145, 
+                    0.15353001815762682`}, {-0.9625333023899627, 
+                    0.15619703551225453`}}]}, {
+                    GrayLevel[0.85], 
+                    
+                    LineBox[{{-0.9625333023899627, 
+                    0.15619703551225453`}, {-0.9633387841179895, 
+                    0.15875429708415}}]}, {
+                    GrayLevel[0.865], 
+                    
+                    LineBox[{{-0.9633387841179895, 
+                    0.15875429708415}, {-0.9641089560615754, 
+                    0.16120787764488664`}}]}, {
+                    GrayLevel[0.88], 
+                    
+                    LineBox[{{-0.9641089560615754, 
+                    0.16120787764488664`}, {-0.9647353951501965, 
+                    0.1631922875434941}}]}, {
+                    GrayLevel[0.895], 
+                    
+                    LineBox[{{-0.9647353951501965, 
+                    0.1631922875434941}, {-0.9653357432975821, 
+                    0.16509752136980005`}}]}, {
+                    GrayLevel[0.9099999999999999], 
+                    
+                    LineBox[{{-0.9653357432975821, 
+                    0.16509752136980005`}, {-0.9660345384672673, 
+                    0.16738615653543373`}}]}, {
+                    GrayLevel[0.925], 
+                    
+                    LineBox[{{-0.9660345384672673, 
+                    0.16738615653543373`}, {-0.9667814329227893, 
+                    0.16987350895294795`}}]}, {
+                    GrayLevel[0.94], 
+                    
+                    LineBox[{{-0.9667814329227893, 
+                    0.16987350895294795`}, {-0.9674863816763943, 
+                    0.1722147481072032}}]}, {
+                    GrayLevel[0.955], 
+                    
+                    LineBox[{{-0.9674863816763943, 
+                    0.1722147481072032}, {-0.9680447407292561, 
+                    0.17394574447010125`}}]}, {
+                    GrayLevel[0.97], 
+                    
+                    LineBox[{{-0.9680447407292561, 
+                    0.17394574447010125`}, {-0.9685861728176411, 
+                    0.17562605492542957`}}]}, {
+                    GrayLevel[0.985], 
+                    
+                    LineBox[{{-0.9685861728176411, 
+                    0.17562605492542957`}, {-0.9691476542825032, 
+                    0.17734414817672184`}}], {
+                    Opacity[0], 
+                    TagBox[
+                    TooltipBox[
+                    
+                    ArrowBox[{{-0.9532934101918611, 
+                    0.12418809026368222`}, {-0.9519459081018972, 
+                    0.11971884138965126`}}], 
+                    RowBox[{"Entity", "[", 
+                    RowBox[{"\"Flight\"", ",", "\"202207200000230700\""}], 
+                    "]"}]], Annotation[#, 
+                    Entity["Flight", "202207200000230700"], 
+                    "Tooltip"]& ]}}}}}}}}}}}}}}}}}}}}}}}}}, Background -> 
+       None, ImageSize -> {247.20000000000022`, Automatic}, 
+       PlotRange -> {{-1, 1}, {-1, 1}}, PlotRangePadding -> 0.03], 
+      InterpretationBox[
+       Cell[
+        BoxData[
+         FormBox[
+          StyleBox["\"S\"", StripOnInput -> False], TextForm]], "InlineText"], 
+       Text[
+        Style["S"]]], 
+      InterpretationBox[
+       Cell[
+        BoxData[
+         FormBox[
+          StyleBox["\"E\"", StripOnInput -> False], TextForm]], "InlineText"], 
+       Text[
+        Style["E"]]], 
+      InterpretationBox[
+       Cell[
+        BoxData[
+         FormBox[
+          StyleBox["\"N\"", StripOnInput -> False], TextForm]], "InlineText"], 
+       Text[
+        Style["N"]]], 
+      InterpretationBox[
+       Cell[
+        BoxData[
+         FormBox[
+          StyleBox["\"W\"", StripOnInput -> False], TextForm]], "InlineText"], 
+       Text[
+        Style["W"]]]},
+     "Labeled",
+     DisplayFunction->(GridBox[{{"", 
+         ItemBox[#4, DefaultBaseStyle -> "LabeledLabel"], ""}, {
+         ItemBox[#3, DefaultBaseStyle -> "LabeledLabel"], 
+         TagBox[
+          ItemBox[
+           PaneBox[
+            TagBox[#, "SkipImageSizeLevel"], Alignment -> {Center, Baseline}, 
+            BaselinePosition -> Baseline, ImageMargins -> 5], 
+           DefaultBaseStyle -> "Labeled"], "SkipImageSizeLevel"], 
+         ItemBox[#5, DefaultBaseStyle -> "LabeledLabel"]}, {"", 
+         ItemBox[#2, DefaultBaseStyle -> "LabeledLabel"], ""}}, 
+       GridBoxAlignment -> {"Columns" -> {{Center}}, "Rows" -> {{Center}}}, 
+       AutoDelete -> False, 
+       GridBoxItemSize -> {
+        "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+       BaselinePosition -> {2, 2}]& ),
+     InterpretationFunction->(RowBox[{"Labeled", "[", 
+        RowBox[{#, ",", 
+          RowBox[{"{", 
+            RowBox[{#2, ",", #3, ",", #4, ",", #5}], "}"}], ",", "All", ",", 
+          RowBox[{"{", 
+            RowBox[{"FrameMargins", "\[Rule]", "5"}], "}"}]}], "]"}]& )]}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.8673323659446325`*^9},
+ CellLabel->"Out[1]=",
+ CellID->725946049,ExpressionUUID->"63894db6-a608-4b35-a5b2-dadbd511d452"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "More Examples",
+ Cell[BoxData[
+  TemplateBox[{"MoreExamples", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell["Extended examples in standardized sections.", "MoreInfoText"], 
+       BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "239d2dfc-d2da-4eec-bdd2-4b2c751f0d71"]
+}], "ExtendedExamplesSection",
+ CellTags->"ExtendedExamples",
+ CellID->314832230,ExpressionUUID->"7e1859d1-e05c-49c6-8731-04fe1d9e37ce"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Scope", "ExampleSection",ExpressionUUID->
+   "4907a611-5ec2-4970-ad05-4837568cc00e"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->280719701,ExpressionUUID->"dde2987e-05ec-4bb7-9c83-2c758ee61290"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Generalizations & Extensions", "ExampleSection",ExpressionUUID->
+   "d3fd404c-172a-41a7-b0e2-3d3c2febe493"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->266355146,ExpressionUUID->"ae77ebda-3409-4d76-a40b-d7b844075eaf"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Options", "ExampleSection",ExpressionUUID->
+   "de4f24e5-b606-4540-a86a-c7ff218376f9"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->41607024,ExpressionUUID->"87b54d13-5415-430e-91f0-f893a370abc8"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "XXXX", "ExampleSubsection",ExpressionUUID->
+   "fe8f72cf-86f9-4a87-85c9-1534b803eaa1"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->210484721,ExpressionUUID->"0a472ca3-7851-4054-ba29-3cc2092c31c3"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "XXXX", "ExampleSubsection",ExpressionUUID->
+   "3fa10ce0-a755-4ab5-a729-a8f60d68b931"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->155284058,ExpressionUUID->"489a2850-fd01-4940-ab05-9fb81f7d6746"]
+}, Open  ]],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Applications", "ExampleSection",ExpressionUUID->
+   "4868235c-0bbd-4062-91ae-0a645636f81d"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->218985087,ExpressionUUID->"48e9fa87-2ac7-4576-9e8e-ed1f73d73468"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Properties & Relations", "ExampleSection",ExpressionUUID->
+   "dd2d1b0a-4349-4565-bbcb-518cc51ad7ff"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->99956783,ExpressionUUID->"e28a0803-f115-454a-8ee0-5c9c36870098"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Possible Issues", "ExampleSection",ExpressionUUID->
+   "76870cbb-daa4-4b3d-a2a7-c9ad8fbd6b14"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->137231370,ExpressionUUID->"afc14b73-26ee-4526-8695-bec39f153347"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Interactive Examples", "ExampleSection",ExpressionUUID->
+   "5e140088-25ea-4230-ba4b-083e450050c5"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->259607372,ExpressionUUID->"c1029ad8-6b1a-4263-b855-56ff8e37f9b1"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Neat Examples", "ExampleSection",ExpressionUUID->
+   "7985da7c-5a7f-445a-88c7-1a55de6cfdd6"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->94573161,ExpressionUUID->"d284417b-3841-4942-99fc-906bee9695fc"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Metadata", "MetadataSection",
+ CellID->111689807,ExpressionUUID->"88391f04-6ac4-49dc-904b-f709013e4ef6"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Categorization",
+ Cell[BoxData[
+  TemplateBox[{"Metadata", 
+    Cell[
+     BoxData[
+      FrameBox[
+       Cell[
+       "Metadata such as page URI, context, and type of documentation page.", 
+        "MoreInfoText"], BaseStyle -> "IFrameBox"]], "MoreInfoTextOuter"]},
+   "MoreInfoOpenerButtonTemplate"]],ExpressionUUID->
+  "e12ed6da-2f80-4ebb-a32d-7b78add3f7f8"]
+}], "CategorizationSection",
+ CellID->104608319,ExpressionUUID->"3aea386c-1028-4dee-b5bb-47f493c8bf76"],
+
+Cell["Symbol", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->65026330,ExpressionUUID->"dc221c49-c4a2-48d2-b89b-f08af46e87e5"],
+
+Cell["PeterBurbery/GeographyData", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->119386751,ExpressionUUID->"5af8b6b0-058c-4658-b116-6a253788c495"],
+
+Cell["PeterBurbery`GeographyData`", "Categorization",
+ CellLabel->"Context",
+ CellID->50760159,ExpressionUUID->"674f282e-6169-4d54-82c5-264bc8837a3e"],
+
+Cell["PeterBurbery/GeographyData/ref/FlightsOverhead", "Categorization",
+ CellLabel->"URI",
+ CellID->100509350,ExpressionUUID->"33b52711-690e-4516-b71f-6d6d10d172c1"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->77953848,ExpressionUUID->"f5e68ece-a570-41ed-b2d1-b5ca642b2b9a"],
+
+Cell["XXXX", "Keywords",
+ CellID->693367112,ExpressionUUID->"ec18c99f-20d6-438e-826c-b8e60a3a5759"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->412154693,ExpressionUUID->"c529561b-a1da-46e2-a854-c74e5333f521"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->3889508,ExpressionUUID->"e9ddb3b8-7ce9-4c2f-b554-df237f6608d3"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->273548307,ExpressionUUID->"be128eea-b0f7-40ee-b38a-9172d551a4e2"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->680455518,ExpressionUUID->"d0ee776e-5839-4d55-9b8b-36e5b008b745"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->591715692,ExpressionUUID->"6cd942d5-9734-4d6b-95cc-853fe6078026"]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{1152., 585.6},
+WindowMargins->{{
+  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
+TaggingRules-><|"Paclet" -> "PeterBurbery/GeographyData"|>,
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStylesExt.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"4b589813-537d-4d73-ae0c-bc406f9126bd"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "ExtendedExamples"->{
+  Cell[55694, 1326, 487, 13, 71, "ExtendedExamplesSection",ExpressionUUID->"7e1859d1-e05c-49c6-8731-04fe1d9e37ce",
+   CellTags->"ExtendedExamples",
+   CellID->314832230]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"ExtendedExamples", 61548, 1500}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 112, 1, 91, "ObjectName",ExpressionUUID->"d6d5f791-866a-4303-bb52-4657259daa8b",
+ CellID->789340954],
+Cell[695, 25, 615, 12, 96, "Usage",ExpressionUUID->"7c1c9da1-5537-4961-aa76-36db9d400044",
+ CellID->196456096],
+Cell[1313, 39, 96, 1, 33, "Notes",ExpressionUUID->"2395094d-52db-4473-bb4d-77602fdfd6aa",
+ CellID->126568499]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1446, 45, 434, 12, 56, "TechNotesSection",ExpressionUUID->"2317ec7c-fc91-4789-a4db-99f07eb4ef80",
+ CellID->91358005],
+Cell[1883, 59, 100, 1, 23, "Tutorials",ExpressionUUID->"9d2c90fe-e050-4bb3-af2f-7161123bacec",
+ CellID->765189943]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2020, 65, 472, 13, 40, "RelatedLinksSection",ExpressionUUID->"4cb6a116-008c-48ff-bab6-81a632057129",
+ CellID->136603952],
+Cell[2495, 80, 103, 1, 23, "RelatedLinks",ExpressionUUID->"d0d7e052-18f0-44a4-815f-8339adc993ee",
+ CellID->374743776]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2635, 86, 586, 15, 40, "SeeAlsoSection",ExpressionUUID->"2f15921d-5ddd-4ca2-8f1b-45a4a1d2cf04",
+ CellID->194719968],
+Cell[3224, 103, 97, 1, 23, "SeeAlso",ExpressionUUID->"cfb64e39-fd20-40fc-b354-ae52db16330b",
+ CellID->34014644]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3358, 109, 182, 2, 40, "MoreAboutSection",ExpressionUUID->"dcce6579-09b8-4001-965b-5937867913e2",
+ CellID->35214943],
+Cell[3543, 113, 297, 5, 23, "MoreAbout",ExpressionUUID->"dc4662e2-b30b-4a03-8e76-a29bf6c9d0bf",
+ CellID->88153988]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3877, 123, 529, 14, 86, "ExamplesInitializationSection",ExpressionUUID->"ff031e52-9578-4646-aa63-50edfa8fd6fc",
+ CellID->22811984],
+Cell[4409, 139, 251, 4, 56, "ExampleInitialization",ExpressionUUID->"b719c4cc-b6bc-47c9-ab9b-46e30da80e9a",
+ CellID->771669]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4697, 148, 440, 12, 88, "PrimaryExamplesSection",ExpressionUUID->"fc194e6b-04db-4250-a1ef-6c39d21da767",
+ CellID->3523319],
+Cell[5140, 162, 197, 2, 30, "ExampleText",ExpressionUUID->"35704094-884c-461b-bda1-8baa31af79d1",
+ CellID->206791742],
+Cell[CellGroupData[{
+Cell[5362, 168, 234, 4, 31, "Input",ExpressionUUID->"826e805e-0c6a-4339-a67a-7d43b002617d",
+ CellID->59693539],
+Cell[5599, 174, 50046, 1146, 794, "Output",ExpressionUUID->"63894db6-a608-4b35-a5b2-dadbd511d452",
+ CellID->725946049]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[55694, 1326, 487, 13, 71, "ExtendedExamplesSection",ExpressionUUID->"7e1859d1-e05c-49c6-8731-04fe1d9e37ce",
+ CellTags->"ExtendedExamples",
+ CellID->314832230],
+Cell[56184, 1341, 241, 5, 43, "ExampleSection",ExpressionUUID->"dde2987e-05ec-4bb7-9c83-2c758ee61290",
+ CellID->280719701],
+Cell[56428, 1348, 264, 5, 27, "ExampleSection",ExpressionUUID->"ae77ebda-3409-4d76-a40b-d7b844075eaf",
+ CellID->266355146],
+Cell[CellGroupData[{
+Cell[56717, 1357, 242, 5, 27, "ExampleSection",ExpressionUUID->"87b54d13-5415-430e-91f0-f893a370abc8",
+ CellID->41607024],
+Cell[56962, 1364, 246, 5, 32, "ExampleSubsection",ExpressionUUID->"0a472ca3-7851-4054-ba29-3cc2092c31c3",
+ CellID->210484721],
+Cell[57211, 1371, 246, 5, 26, "ExampleSubsection",ExpressionUUID->"489a2850-fd01-4940-ab05-9fb81f7d6746",
+ CellID->155284058]
+}, Open  ]],
+Cell[57472, 1379, 248, 5, 43, "ExampleSection",ExpressionUUID->"48e9fa87-2ac7-4576-9e8e-ed1f73d73468",
+ CellID->218985087],
+Cell[57723, 1386, 257, 5, 27, "ExampleSection",ExpressionUUID->"e28a0803-f115-454a-8ee0-5c9c36870098",
+ CellID->99956783],
+Cell[57983, 1393, 251, 5, 27, "ExampleSection",ExpressionUUID->"afc14b73-26ee-4526-8695-bec39f153347",
+ CellID->137231370],
+Cell[58237, 1400, 256, 5, 27, "ExampleSection",ExpressionUUID->"c1029ad8-6b1a-4263-b855-56ff8e37f9b1",
+ CellID->259607372],
+Cell[58496, 1407, 248, 5, 27, "ExampleSection",ExpressionUUID->"d284417b-3841-4942-99fc-906bee9695fc",
+ CellID->94573161]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[58781, 1417, 110, 1, 77, "MetadataSection",ExpressionUUID->"88391f04-6ac4-49dc-904b-f709013e4ef6",
+ CellID->111689807],
+Cell[CellGroupData[{
+Cell[58916, 1422, 484, 13, 38, "CategorizationSection",ExpressionUUID->"3aea386c-1028-4dee-b5bb-47f493c8bf76",
+ CellID->104608319],
+Cell[59403, 1437, 133, 2, 70, "Categorization",ExpressionUUID->"dc221c49-c4a2-48d2-b89b-f08af46e87e5",
+ CellID->65026330],
+Cell[59539, 1441, 154, 2, 70, "Categorization",ExpressionUUID->"5af8b6b0-058c-4658-b116-6a253788c495",
+ CellID->119386751],
+Cell[59696, 1445, 150, 2, 70, "Categorization",ExpressionUUID->"674f282e-6169-4d54-82c5-264bc8837a3e",
+ CellID->50760159],
+Cell[59849, 1449, 166, 2, 70, "Categorization",ExpressionUUID->"33b52711-690e-4516-b71f-6d6d10d172c1",
+ CellID->100509350]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[60052, 1456, 109, 1, 25, "KeywordsSection",ExpressionUUID->"f5e68ece-a570-41ed-b2d1-b5ca642b2b9a",
+ CellID->77953848],
+Cell[60164, 1459, 99, 1, 70, "Keywords",ExpressionUUID->"ec18c99f-20d6-438e-826c-b8e60a3a5759",
+ CellID->693367112]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[60300, 1465, 119, 1, 25, "TemplatesSection",ExpressionUUID->"c529561b-a1da-46e2-a854-c74e5333f521",
+ CellID->412154693],
+Cell[60422, 1468, 146, 2, 70, "Template",ExpressionUUID->"e9ddb3b8-7ce9-4c2f-b554-df237f6608d3",
+ CellID->3889508],
+Cell[60571, 1472, 137, 2, 70, "Template",ExpressionUUID->"be128eea-b0f7-40ee-b38a-9172d551a4e2",
+ CellID->273548307],
+Cell[60711, 1476, 135, 2, 70, "Template",ExpressionUUID->"d0ee776e-5839-4d55-9b8b-36e5b008b745",
+ CellID->680455518],
+Cell[60849, 1480, 137, 2, 70, "Template",ExpressionUUID->"6cd942d5-9734-4d6b-95cc-853fe6078026",
+ CellID->591715692]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
