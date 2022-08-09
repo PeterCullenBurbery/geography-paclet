@@ -6,6 +6,7 @@ BeginPackage["PeterBurbery`GeographyData`"];
 
 WikidataGeoPosition;
 FlightsOverhead;
+
 Begin["`Private`"];
 
 (* Define your public and private symbols here. *)
@@ -157,6 +158,11 @@ EarthGeoidFrame[jd_,long_,lat_,elevationnmeters_]:=Apply[{.00004263523 {Cos[#] #
 EarthGeoidFrame[jd_,long_,lat_,elevationnmeters_,1]:=Apply[.00004263523 {Cos[#] #3,Sin[#] #3,#2}&,Flatten[{JDToMeanSiderealRadians[jd]+long,Earthsincos[lat,elevationnmeters]}]]
 
 Earthsincos[lat_,h_]:=With[{a=ArcTan[Cos[lat],.99664719Sin[lat]]},{.99664719 Sin[a]+h/6378140 Sin[lat],Cos[a]+h/6378140 Cos[lat]}]
+
+
+
+
+
 End[]; (* End `Private` *)
 
 EndPackage[];

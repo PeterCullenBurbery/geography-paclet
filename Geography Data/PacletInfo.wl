@@ -7,7 +7,7 @@ PacletObject[
     "Creator" -> "Peter Cullen Burbery",
     "License" -> "MIT",
     "PublisherID" -> "PeterBurbery",
-    "Version" -> "1.2.0",
+    "Version" -> "1.6.0",
     "WolframVersion" -> "13.1+",
     "Extensions" -> {
       {
@@ -20,8 +20,9 @@ PacletObject[
           }
         },
         "Symbols" -> {
-          "PeterBurbery`GeographyData`WikidataGeoPosition",
-          "PeterBurbery`GeographyData`FlightsOverhead"
+          "PeterBurbery`GeographyData`FlightsOverhead",
+          "PeterBurbery`GeographyData`WeatherRegionPlot",
+          "PeterBurbery`GeographyData`WikidataGeoPosition"
         }
       },
       {"Documentation", "Language" -> "English"}
